@@ -3,12 +3,13 @@ layout: default
 title: "Métodos em Genética"
 ---
 
-# 📚 Bem-vindo à disciplina Métodos em Genética!
+# 🧬💻 Métodos em Genética - IBG474
 
 Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 
 ## 📄 Protocolos
 - [BLAST](/metodos/protocolos/blast/)
+
 
 
 
@@ -19,3 +20,9 @@ Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 - [aula_03 - Metagenomas e Microbiomas](https://www.dropbox.com/scl/fo/iny3fxmvu7jvqxbygl4py/AJs7t_xp7GUjRz8i6xg8mXA?rlkey=k8pt87lo08g6z2xyjm4m0fmtb&dl=0)
 - [aula_04 - QUAST, Anotação de genomas e Resistoma](https://www.dropbox.com/scl/fo/p87um8n7cksyhq6mf714h/AIKFHrFaVR6CqgOQdWCBblo?rlkey=3vmb4r184qbk3qd5sh8f6q0zv&dl=0)
 
+
+---
+#### Para saber mais sobre o Junqueira Lab:
+
+
+**Departamento de Genética | Universidade Federal do Rio de Janeiro**
