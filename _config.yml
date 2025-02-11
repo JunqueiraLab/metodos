@@ -1,7 +1,9 @@
 title: "Métodos em Genética"
 description: "Módulo de Bioinformática - Profa. Ana Junqueira"
-#baseurl: "/metodos"
+baseurl: "/metodos"
 url: "https://JunqueiraLab.github.io"
+github:
+  is_project_page: false
 
 # Aplicar o tema Cayman manualmente
 remote_theme: pages-themes/cayman@v0.2.0
