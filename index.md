@@ -12,7 +12,7 @@ Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 
 
 
-
+---
 ## 💾 Conjuntos de dados utilizados nas aulas práticas
 - [Todos os arquivos](https://www.dropbox.com/scl/fo/mf5gms260zz4ko2gro862/AObxlmgZInlI3gst79PEf9E?rlkey=ibn40f6ikzsik6j4vjtewsrbm&dl=0){:target="_blank"}
 - [aula_01 - FastQC e BLAST](https://www.dropbox.com/scl/fo/3g3noknginlu36zwxqvhx/AFsqRmvAFBWnYaKdrGB77CQ?rlkey=fuyfx3d1ccsyzdfx7u1cz9859&dl=0){:target="_blank"}
