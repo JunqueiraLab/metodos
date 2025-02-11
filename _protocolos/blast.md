@@ -53,7 +53,7 @@ Agora vamos fazer um exercício para analisar os resultados do BLAST online, uti
 
 ## 🖥️ **BLAST na linha de comando**
 
-Em muitos projetos que utilizam sequenciamento massivo, é praticamente impossível fazer o BLAST via web. Isso ocorre porque existem limites impostos pelo NCBI para a análise de dados. Por exemplo, o BLAST via web tem um limite de tamanho das sequências de nucleotídeos e proteínas para serem submetidas (1 milhão de nt ou 100 mil aa) e o uso de processamento nos servidores online também é limitado. Além disso, você pode ter um volume grande de análises que quer processar de forma automatizada com scripts. Para estas ocasiões, é possível realizar sua análise via linha de comando. Para isso, você deve instalar o pacote do BLAST+ no seu computador ou servidor a partir do download do pacote do [NCBI](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) ou via um gerenciador de pacotes e programas (por exemplo: `conda install blast`). Uma vez com o pacote instalado, você pode fazer uma análise similar à que fez via web. 
+Em muitos projetos que utilizam sequenciamento massivo, é praticamente impossível fazer o BLAST via web. Isso ocorre porque existem limites impostos pelo NCBI para a análise de dados. Por exemplo, o BLAST via web tem um limite de tamanho das sequências de nucleotídeos e proteínas para serem submetidas (1 milhão de nt ou 100 mil aa) e o uso de processamento nos servidores online também é limitado. Além disso, você pode ter um volume grande de análises que quer processar de forma automatizada com scripts. Para estas ocasiões, é possível realizar sua análise via linha de comando. Para isso, você deve instalar o pacote do BLAST+ no seu computador ou servidor a partir do download do pacote do [NCBI](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/){:target="_blank"} ou via um gerenciador de pacotes e programas (por exemplo: `conda install blast`). Uma vez com o pacote instalado, você pode fazer uma análise similar à que fez via web. 
 
 ❗ **Atenção** O BLAST+ já está instalado no seu computador e pode ser ativado com o comando:
 
@@ -74,5 +74,5 @@ Agora você pode fazer a mesma análise que fez via webserver utilizando a segui
 
 ℹ️ O pacote do BLAST+ provê todos os módulos necessários para realizar as análises com nucleotídeos e aminoácidos (blastn, blastp, blastx, tblastn, tblastx), além de outros módulos como o megablast (algoritmo alterado), psiblast, rpsblast (busca por perfis em regiões delimitadas de sequências) e o makeblastdb, para indexar bancos de dados (Altschul et al. 1997).
 Quer saber mais sobre o BLAST na linha de comando? 
-Acesse o [BLAST® Command Line Applications User Manual](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
+Acesse o [BLAST® Command Line Applications User Manual](https://www.ncbi.nlm.nih.gov/books/NBK279690/){:target="_blank"}.
 
