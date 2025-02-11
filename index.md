@@ -23,6 +23,8 @@ Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 
 ---
 #### Para saber mais sobre o Junqueira Lab:
-
+<a href="https://junqueiralab.com" target="_blank">
+  <img src="/metodos/images/JunqueiraLab_transparent.png" alt="Logo" width="15%" style="border-radius: 10px;">
+</a>
 
 **Departamento de Genética | Universidade Federal do Rio de Janeiro**
