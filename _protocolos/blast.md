@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Protocolo - Análise de Sequências com BLAST"
+title: "Protocolo - BLAST"
 permalink: /protocolos/blast/
 ---
 
