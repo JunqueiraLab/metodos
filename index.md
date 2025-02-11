@@ -9,6 +9,7 @@ Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 
 ## 📄 Protocolos
 - [BLAST](/metodos/protocolos/blast/)
+- [FastQC](/metodos/protocolos/fastqc/)
 
 
 
