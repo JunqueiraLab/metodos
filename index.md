@@ -3,7 +3,7 @@ layout: default
 title: "Métodos em Genética"
 ---
 
-# 🧬💻 Métodos em Genética - IBG474
+# 🧬 Métodos em Genética - IBG474 💻
 
 Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 
