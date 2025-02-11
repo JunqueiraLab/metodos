@@ -3,6 +3,7 @@ layout: default
 title: "Protocolo - BLAST"
 permalink: /protocolos/blast/
 ---
+[⬅ Voltar para a página principal](/metodos/)
 
 # 🔬 BLAST - Basic local alignment search tool
 O BLAST é o algoritmo mais utilizado para comparação de sequências, buscando por alinhamentos locais ótimos entre uma sequência de interesse (**query**) e todas as sequências contidas em um banco de dados de referência (Altschul et al. 1990). O BLAST utiliza uma abordagem heurística para buscar similaridades na base de dados, tornando-a mais rápida e eficiente.
@@ -72,7 +73,17 @@ Agora você pode fazer a mesma análise que fez via webserver utilizando a segui
 
 ```blastn -db nt -query AE001.fasta -remote```
 
+
 ℹ️ O pacote do BLAST+ provê todos os módulos necessários para realizar as análises com nucleotídeos e aminoácidos (blastn, blastp, blastx, tblastn, tblastx), além de outros módulos como o megablast (algoritmo alterado), psiblast, rpsblast (busca por perfis em regiões delimitadas de sequências) e o makeblastdb, para indexar bancos de dados (Altschul et al. 1997).
 Quer saber mais sobre o BLAST na linha de comando? 
 Acesse o [BLAST® Command Line Applications User Manual](https://www.ncbi.nlm.nih.gov/books/NBK279690/){:target="_blank"}.
+
+[⬅ Voltar para a página principal](/metodos/)
+
+---
+### 📖 **Referências**
+- Altschul SF et al. 1997. Gapped BLAST and PSI-BLAST: a new generation of protein database search programs. Nucleic Acids Res. 25:3389–3402. doi: 10.1093/nar/25.17.3389.
+- Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ. 1990. Basic local alignment search tool. Journal of molecular biology. 215:403–410. doi: 10.1016/s0022-2836(05)80360-2.
+- Morgulis A et al. 2008. Database indexing for production MegaBLAST searches. Bioinformatics. 24:1757–1764. doi: 10.1093/bioinformatics/btn322.
+
 
