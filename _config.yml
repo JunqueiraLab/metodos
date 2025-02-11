@@ -1,0 +1,18 @@
+title: "Métodos em Genética"
+description: "Módulo de Bioinformática - Profa. Ana Junqueira"
+baseurl: "/metodos"
+url: "https://JunqueiraLab.github.io"
+
+# Aplicar o tema Cayman manualmente
+remote_theme: pages-themes/cayman@v0.2.0
+
+# Ativar suporte a temas remotos
+plugins:
+  - jekyll-remote-theme
+
+# Configuração para permitir páginas de protocolos
+collections:
+  protocolos:
+    output: true
+    permalink: /protocolos/:name/
+
