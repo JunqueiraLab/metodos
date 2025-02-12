@@ -32,7 +32,7 @@ Quando o programa abrir, siga o seguinte protocolo:
 
 **4**.	Agora avalie a **qualidade de cada base** (basecalling) no gráfico boxplot. A linha vermelha em cada box é o valor mediano da qualidade. A barra amarela representa a amplitude interquartil (25-75%) dos valores de qualidade. As linhas superior e inferior representam os pontos de 10% e 90% dos dados. A linha azul representa a qualidade média das bases em cada posição do read. O que você pode dizer sobre os reads baseando-se nestes resultados? 
 
-**5**.	Avalie a **qualidade de sequência gerada por tile**. Esta análise é disponível somente para dados da plataforma Illumina e indica o desvio da qualidade média dos reads ao longo da flowcell. Desta forma, é possível visualizar se houve uma perda de qualidade associada a algumas regiões da flowcell ou se o sequenciamento foi homogêneo em toda flowcell. As cores variam da escala fria <span style="color: lightblue;">**azul**</span> 🥶 para quente <span style="color: red;">**vermelha**</span> 🥵 em ordem decrescente de qualidade. Ou seja, cores frias indicam boa qualidade e cores quentes indicam uma qualidade ruim.  
+**5**.	Avalie a **qualidade de sequência gerada por tile**. Esta análise é disponível somente para dados da plataforma Illumina e indica o desvio da qualidade média dos reads ao longo da flowcell. Desta forma, é possível visualizar se houve uma perda de qualidade associada a algumas regiões da flowcell ou se o sequenciamento foi homogêneo em toda flowcell. As cores variam da escala fria <span style="color: SkyBlue;">**azul**</span> 🥶 para quente <span style="color: red;">**vermelha**</span> 🥵 em ordem decrescente de qualidade. Ou seja, cores frias indicam boa qualidade e cores quentes indicam uma qualidade ruim.  
 
 **6**.	O gráfico de **qualidade por sequência** gerada ajuda a entender como a corrida de sequenciamento se comportou, indicando o número de reads com um determinado Q-score. 
 
@@ -62,7 +62,7 @@ Quando o programa abrir, siga o seguinte protocolo:
 A ordem das informações de um read em formato `.fastq` tem o seguinte significado:
 
 <div align="center">
-<img src="/metodos/images/fastq.png" alt="fastq" width="110%;">
+<img src="/metodos/images/fastq.png" alt="fastq" width="150%;">
 </div>
 
 
