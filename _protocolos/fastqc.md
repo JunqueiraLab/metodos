@@ -52,8 +52,18 @@ Quando o programa abrir, siga o seguinte protocolo:
 
 **14**.	Se você quiser, pode salvar os reports em formato html clicando em File▸Save Report
 
-Quer saber mais informações sobre os parâmetros das análises realizadas pelos módulos do FastQC? 
+
+ℹ️ Quer saber mais informações sobre os parâmetros das análises realizadas pelos módulos do FastQC? 
 <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/" target="_blank">Clique aqui</a>.
 
 ---
 ### ℹ️ O formato FASTQ
+
+@identificador_da_sequencia
+Sequencia (ATCG)
++
+Caractere de codificação da qualidade das bases
+
+
+
+[⬅ Voltar para a página principal](/metodos/)
