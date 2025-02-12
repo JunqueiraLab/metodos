@@ -60,19 +60,14 @@ Quando o programa abrir, siga o seguinte protocolo:
 ### ℹ️ O formato FASTQ
 A ordem das informações de um read em formato .fastq tem o seguinte significado:
 
-@identificador_da_sequencia\\
-Sequencia (ATCG)\\
-+\\
-Caractere de codificação da qualidade das bases
+#<div align="center">
+#<img src="/metodos/images/fastq.png" alt="fastq" width="50%" style="border-radius: 15px;">
+#</div>
 
-Como no exemplo abaixo:
 
-```
-@D00480L:372:H5F2TBCX2:1:2112:17314:20024 1:N:0:ATTACTCG+CCTATCCT\\
-CGGTCACCATCGTCATGACGGTCAATCGCAACAACAGAAGAAGAAGATTCCCGAAGTGATAAGAAGAATAGTGCACGCAAAGCTA\\
-+\\
-@0<<DC<CFHFEDF@GHHGCCE0<CCCEHHDHII?H@GF1CE<DFCHCHHEGFII<CEHHII@H@11<FHIEHEH@HH<DCEHHH
-```
+A qualidade das bases é codificada em ASCII (American Standard Code for Information Interchange). Para entender a correlação da codificação da qualidade da chamada de bases, 
+<a href="https://help.basespace.illumina.com/files-used-by-basespace/quality-scores" target="_blank">clique aqui</a>.
+
 
 
 [⬅ Voltar para a página principal](/metodos/)
