@@ -57,11 +57,3 @@ Quer saber mais informações sobre os parâmetros das análises realizadas pelo
 
 ---
 ### ℹ️ O formato FASTQ
-
-Um arquivo com a extensão `.fastq`contém informações de um *read*
-```
-@identificador_da_sequencia
-Sequencia (ATCG)
-+
-Caractere de codificação da qualidade das bases
-```
