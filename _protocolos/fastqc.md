@@ -60,9 +60,9 @@ Quando o programa abrir, siga o seguinte protocolo:
 ### ℹ️ O formato FASTQ
 A ordem das informações de um read em formato .fastq tem o seguinte significado:
 
-#<div align="center">
-#<img src="/metodos/images/fastq.png" alt="fastq" width="50%" style="border-radius: 15px;">
-#</div>
+<div align="center">
+<img src="/metodos/images/fastq.png" alt="fastq" width="50%" style="border-radius: 15px;">
+</div>
 
 
 A qualidade das bases é codificada em ASCII (American Standard Code for Information Interchange). Para entender a correlação da codificação da qualidade da chamada de bases, 
