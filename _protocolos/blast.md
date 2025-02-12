@@ -36,15 +36,15 @@ Agora vamos fazer um exercício para analisar os resultados do BLAST online, uti
 
 ### **Passos para executar o BLAST no NCBI**
 
-1. **Acesse a página do BLAST no NCBI:** <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">Clique aqui</a>
-2. **Escolha** “Nucleotide BLAST” (**blastn**).
-3. **Abra o arquivo `AE001.fasta`** na pasta da `aula01`, copie e cole a sequência no campo **“Enter Query Sequence”**.
-4. **Atente para os parâmetros da busca.**
-5. **Analise os resultados:**
-   - **A qual organismo a sequência pertence?**
-   - **Qual o valor do e-value?**
-   - **Qual o valor do bit-score?**
-   - **Você acha este um resultado confiável?**
+**1**. Acesse a página do BLAST no NCBI: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">Clique aqui</a>
+**2**. Escolha “Nucleotide BLAST” (**blastn**).
+**3**. Abra o arquivo `AE001.fasta` na pasta da `aula01`, copie e cole a sequência no campo **“Enter Query Sequence”**.
+**4**. Atente para os parâmetros da busca.
+**5**. Analise os resultados:
+   - A qual organismo a sequência pertence?
+   - Qual o valor do e-value?
+   - Qual o valor do bit-score?
+   - Você acha este um resultado confiável?
 
 📌 **Dica:** O **e-value** indica a significância do alinhamento. Quanto **menor o e-value**, mais significativo é o resultado.
 
@@ -65,7 +65,7 @@ Para rodar o BLAST, a linha de comando básica do blastn é:
 ```blastn -db [database] -query [input_file] -remote```
 
 - **blastn** é o comando para o algoritmo de alinhamento de sequências de nucleotídeos contra um banco de nucleotídeos
-- **-db** indica qual banco será utilizado na busca (nt, para nucleotídeos ou nr para proteínas, por exemplo)
+- **-db** indica qual banco será utilizado na busca (**nt**, para nucleotídeos ou **nr** para proteínas, por exemplo)
 - **-query** é o input do arquivo de sequência que se quer buscar
 - **-remote** indica que o comando deve fazer a busca online
 
@@ -73,6 +73,12 @@ Agora você pode fazer a mesma análise que fez via webserver utilizando a segui
 
 ```blastn -db nt -query AE001.fasta -remote```
 
+Analise os resultados e compare com os do BLAST online:
+   - A qual organismo a sequência pertence?
+   - Qual o valor do e-value?
+   - Qual o valor do bit-score?
+   - Você acha este um resultado confiável?
+     
 
 ℹ️ O pacote do BLAST+ provê todos os módulos necessários para realizar as análises com nucleotídeos e aminoácidos (blastn, blastp, blastx, tblastn, tblastx), além de outros módulos como o megablast (algoritmo alterado), psiblast, rpsblast (busca por perfis em regiões delimitadas de sequências) e o makeblastdb, para indexar bancos de dados (Altschul et al. 1997).
 Quer saber mais sobre o BLAST na linha de comando? 
