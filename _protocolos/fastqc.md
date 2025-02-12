@@ -60,10 +60,10 @@ Quer saber mais informações sobre os parâmetros das análises realizadas pelo
 
 Um arquivo com a extensão `.fastq`contém informações de um read, com o seguinte significado:
 
-```@identificador_da_sequencia
+@identificador_da_sequencia
 Sequencia (ATCG)
 +
-Caractere de codificação da qualidade das bases```
+Caractere de codificação da qualidade das bases
 
 Como no exemplo abaixo:
 
