@@ -58,12 +58,19 @@ Quando o programa abrir, siga o seguinte protocolo:
 
 ---
 ### ℹ️ O formato FASTQ
+A ordem das informações de um read em formato .fastq tem o seguinte significado:
 
 @identificador_da_sequencia\\
 Sequencia (ATCG)\\
 +\\
 Caractere de codificação da qualidade das bases
 
+Como no exemplo abaixo:
+
+@D00480L:372:H5F2TBCX2:1:2112:17314:20024 1:N:0:ATTACTCG+CCTATCCT\\
+CGGTCACCATCGTCATGACGGTCAATCGCAACAACAGAAGAAGAAGATTCCCGAAGTGATAAGAAGAATAGTGCACGCAAAGCTA\\
++\\
+@0<<DC<CFHFEDF@GHHGCCE0<CCCEHHDHII?H@GF1CE<DFCHCHHEGFII<CEHHII@H@11<FHIEHEH@HH<DCEHHH
 
 
 [⬅ Voltar para a página principal](/metodos/)
