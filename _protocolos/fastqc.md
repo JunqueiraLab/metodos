@@ -59,9 +59,9 @@ Quando o programa abrir, siga o seguinte protocolo:
 ---
 ### ℹ️ O formato FASTQ
 
-@identificador_da_sequencia
-Sequencia (ATCG)
-+
+@identificador_da_sequencia\\
+Sequencia (ATCG)\\
++\\
 Caractere de codificação da qualidade das bases
 
 
