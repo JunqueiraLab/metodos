@@ -61,7 +61,7 @@ Quando o programa abrir, siga o seguinte protocolo:
 A ordem das informações de um read em formato .fastq tem o seguinte significado:
 
 <div align="center">
-<img src="/metodos/images/fastq.png" alt="fastq" width="50%" style="border-radius: 15px;">
+<img src="/metodos/images/fastq.png" alt="fastq" width="100%" style="border-radius: 15px;">
 </div>
 
 
