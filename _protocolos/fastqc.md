@@ -58,25 +58,10 @@ Quer saber mais informações sobre os parâmetros das análises realizadas pelo
 ---
 ### ℹ️ O formato FASTQ
 
-Um arquivo com a extensão `.fastq`contém informações de um *read*, com o seguinte significado:
-
-```bash
+Um arquivo com a extensão `.fastq`contém informações de um *read*
+```
 @identificador_da_sequencia
 Sequencia (ATCG)
 +
 Caractere de codificação da qualidade das bases
-
-Como no exemplo abaixo:
-
-```bash
-@D00480L:372:H5F2TBCX2:1:2112:17314:20024 1:N:0:ATTACTCG+CCTATCCT
-CGGTCACCATCGTCATGACGGTCAATCGCAACAACAGAAGAAGAAGATTCCCGAAGTGATAAGAAGAATAGTGCACGCAAAGCTA
-+
-@0<<DC<CFHFEDF@GHHGCCE0<CCCEHHDHII?H@GF1CE<DFCHCHHEGFII<CEHHII@H@11<FHIEHEH@HH<DCEHHH
-
-
-Para entender como funciona a codificação da qualidade da chamada de bases, 
-<a href="https://help.basespace.illumina.com/files-used-by-basespace/quality-scores" target="_blank">clique aqui</a>.
-
-
-[⬅ Voltar para a página principal](/metodos/)
+```
