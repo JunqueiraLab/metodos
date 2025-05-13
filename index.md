@@ -10,6 +10,7 @@ Aqui você encontrará os protocolos de bioinformática para análise de NGS.
 ## 📄 Protocolos
 - [FastQC](/metodos/protocolos/fastqc/)
 - [BLAST](/metodos/protocolos/blast/)
+- [Metagenômica e Microbiomas](/metodos/protocolos/metagenomica/)
 
 
 
