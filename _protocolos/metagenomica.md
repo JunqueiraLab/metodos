@@ -1,18 +1,40 @@
 ---
 layout: default
-title: "Metagenômica e Microbiomas"
-permalink: /protocolos/protocoloX/
+title: "Protocolo - Metagenômica e Microbiomas"
+permalink: /protocolos/metagenomica/
 ---
 [⬅ Voltar para a página principal](/metodos/)
 
+# 🧬 Metagenômica e Microbiomas
 
+## Análise taxonômica de microbiomas
 
+### 🦠 1. Da microbiologia aos metagenomas – um breve histórico
 
+Os microrganismos são parte fundamental da evolução do planeta Terra e habitam os mais diversos ambientes nos últimos 3 bilhões de anos. Foi a partir da ação de microrganismos que a atmosfera terrestre mudou e a produção de oxigênio desencadeou os processos evolutivos que culminaram na vida multicelular. A rápida capacidade de adaptação dos microrganismos explica, em parte, sua grande diversidade de espécies e a vasta variabilidade genética e metabólica (Gibbons & Gilbert 2015). Embora sejam invisíveis a olho nu, a vida microbiana é a mais diversa na Terra e apenas uma pequena porcentagem dessa diversidade é descrita (Whitman et al. 1998).
 
+Os primeiros estudos de observação de bactérias foram feitos em 1683, por Antonie van Leeuwenhoek, que observou, pelo microscópio que ele próprio montou, cinco “animálculos” se movimentando em uma amostra de sua placa dentária. Em seguida, os trabalhos de Pasteur, Koch e outros estabeleceram as bases das interações entre hospedeiros e microrganismos, tanto na causa de doenças como em sua importância para a saúde e fisiologia. Estes trabalhos foram fundamentais para a padronização de estudos de causalidade de doenças infecciosas (postulados de Koch) e para o desenvolvimento de métodos de prevenção, diagnóstico e tratamento de doenças.
 
+Já em 1917, a importância da colonização de microrganismos residentes que conferem efeitos protetivos a seus hospedeiros foi proposta por Alfred Nissle, que notou que alguns soldados eram resistentes aos surtos de disenteria durante a Primeira Guerra. Ao isolar a bactéria causadora do surto, ele relatou que alguns microrganismos associados ao intestino humano impediam o estabelecimento de patógenos no mesmo nicho. A linhagem de *Escherichia coli* isolada por Nissle até hoje é usada como probiótico (Sonnenborn 2016).
 
+Na mesma época, estudos sobre imunidade realizados por Mechnikov e sobre a fisiologia infantil conduzidos por Escherich levaram ao reconhecimento de que algumas espécies bacterianas tinham efeitos benéficos e estavam envolvidas na digestão, saúde e envelhecimento.
 
-[⬅ Voltar para a página principal](/metodos/)
+Apesar dos avanços no cultivo de microrganismos no século XX, logo ficou evidente que havia discrepâncias significativas entre o número de células observadas no microscópio e as que eram cultivadas com sucesso em laboratório. Esta discrepância ficou conhecida como “a grande anomalia da contagem em placas” e se deve a uma variedade de fatores, incluindo taxas de crescimento lentas, exigências de crescimento específicas e dependências de relações simbióticas. Esta anomalia motivou o desenvolvimento de abordagens moleculares para identificar microrganismos não cultiváveis na década de 80. Estudos pioneiros foram feitos por Carl Woese e colaboradores, que estabeleceram a existência de um novo domínio na Árvore da Vida, hoje conhecido como *Archaea* (Woese & Fox 1977; Woese et al. 1990).
+
+As técnicas moleculares desenvolvidas com o advento da reação em cadeia da polimerase (PCR) (Mullis et al. 1986) e do sequenciamento de DNA (Sanger et al. 1977) foram aplicadas para estudar comunidades microbianas associadas a diferentes ambientes e hospedeiros, proporcionando uma visão sem precedentes de sua composição e diversidade. Os avanços recentes na tecnologia de sequenciamento de nova geração (NGS) e nas técnicas computacionais, permitem que genes e até mesmo genomas microbianos completos (Parks et al. 2017) sejam recuperados diretamente de amostras, contornando a necessidade de amplificação e cultivo laboratorial.
+
+### 🧬 2. Metagenômica e Microbiomas
+
+O termo metagenômica foi utilizado pela primeira vez em 1998 (Handelsman et al. 1998) para se referir a uma metodologia para a obtenção do DNA total de amostras de solo sem a necessidade de cultivo e isolamento de linhagens puras de microrganismos. O prefixo “meta” tem etimologia grega (metá) e significa “além de; para além de”. Portanto, o termo metagenoma foi utilizado para referir-se a todo o material genético presente em uma amostra ambiental, composto pelos genomas de diversos organismos individuais. De acordo com a metodologia proposta pelos autores, fragmentos longos do DNA extraído das amostras seriam clonados em vetores de clonagem e inseridos em organismos cultiváveis como *E. coli*, permitindo que a atividade biológica dos clones fosse testada. Esta coleção de clones representaria então o “metagenoma” do solo e a expressão de uma coleção de genes permitiria a prospecção de enzimas com funções desconhecidas. Os resultados dos pesquisadores mostraram uma grande diversidade genética presente neste banco de clones.
+
+O termo também foi aplicado para descrever alguns estudos de genômica ambiental no início dos anos 2000, como os que utilizaram uma abordagem de sequenciamento *shotgun* de genomas em amostras de DNA ambiental com o intuito de testar se as abordagens genômicas desenvolvidas no Projeto Genoma Humano poderiam ser aplicadas com eficácia na descoberta de novos genes e espécies (Venter et al. 2004).
+
+No entanto, a popularização dos trabalhos em metagenomas veio com o uso da amplificação e sequenciamento do gene para a subunidade 16S do RNA ribossomal (rRNA), amplamente utilizado para a identificação taxonômica e estimativa da diversidade procariótica. Esta técnica é similar à que Woese e Fox utilizaram para descrever o domínio *Archaea* (Woese & Fox 1977), mas a metodologia não é considerada uma análise metagenômica no sentido estrito. O sequenciamento do gene codificador do rRNA 16S se baseia na ubiquidade deste gene em procariotos, sendo portanto um marcador universal para bactérias e arqueas. O gene contém regiões conservadas e hipervariáveis. As regiões conservadas são utilizadas para desenhar primers que amplificam por PCR as regiões variáveis. Após o sequenciamento, as regiões variáveis do gene 16S rRNA podem ser usadas para identificar especificamente qual bactéria está presente na amostra. Apesar de sua popularidade, a análise de um marcador molecular não permite analisar a diversidade funcional de comunidades microbianas por não acessar todo o conteúdo gênico presente nas amostras, além de não considerar táxons virais e eucarióticos potencialmente importantes para a comunidade, já que estes organismos não compartilham o mesmo marcador. No entanto, essa abordagem fornece estimativas qualitativas consistentes dos membros procarióticos, embora seja necessário ter cuidado com os aspectos quantitativos (Chouvarine et al. 2015).
+
+Com o barateamento do sequenciamento de genomas e o acesso a plataformas NGS, estudos metagenômicos baseados na técnica *whole genome shotgun* (WGS) se tornaram mais comuns somente na última década. O sequenciamento WGS não depende da amplificação de um gene específico e sequencia todo o material genético presente em uma amostra. Portanto, não é um método específico para bactérias e permite a avaliação de vírus, fungos, protistas e DNA do hospedeiro. Por não depender de amplificação ou conjuntos de primers específicos, esse método é menos enviesado do que o sequenciamento do gene 16S. Além da identificação taxonômica dos organismos até os níveis de espécie e linhagem, a metagenômica WGS trouxe uma maior precisão às inferências funcionais relacionadas às comunidades microbianas por permitir uma análise ampla do conteúdo gênico presente nas amostras, facilitando a associação deste conteúdo a vias metabólicas e permitindo também a identificação de genes específicos associados à patogenicidade e resistência a antimicrobianos (Quince et al. 2017).
+
+Este aumento massivo no sequenciamento metagenômico foi acompanhado pela ampliação de bancos de dados públicos, pelo aumento do poder computacional e pelo desenvolvimento de novas abordagens bioinformáticas. Em conjunto, estas inovações metodológicas foram cruciais para o estudo de microbiomas. O termo “microbioma” geralmente é utilizado para se referir à composição complexa de genes e genomas de microrganismos associados a ambientes, hospedeiros, tecidos e superfícies. Os últimos anos testemunharam o surgimento de análises de alta resolução do microbioma humano e de outros hospedeiros, de ecossistemas terrestres e as primeiras iniciativas de análise de microbiomas urbanos.
+
 
 ---
 ### 📖 **Referências**
