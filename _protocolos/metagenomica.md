@@ -68,7 +68,7 @@ Para uma análise de dados de shotgun de microbiomas, que geralmente consistem e
 O DIAMOND é um alinhador com um algoritmo otimizado para a estratégia seed-extend, utilizando um alfabeto reduzido para a correspondência entre as queries e o banco de dados. Além disso, o programa usa um sistema de duplo indexamento que exige menos memória para o processamento, otimizando também o tempo da análise (Buchfink et al. 2015). Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento, conforme podemos ver na tabela abaixo:
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/assets/images/tabela_reads.png" alt="Tabela 1 - Número de reads de cada amostra" width="600">
+  <img src="{{ site.baseurl }}/images/tabela_reads.png" alt="Tabela 1 - Número de reads de cada amostra" width="600">
 </p>
 
 
