@@ -36,11 +36,11 @@ Agora vamos fazer um exercício para analisar os resultados do BLAST online, uti
 
 ### **Passos para executar o BLAST no NCBI**
 
-**1**. Acesse a página do BLAST no NCBI: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">Clique aqui</a>
-**2**. Escolha “Nucleotide BLAST” (**blastn**).
-**3**. Abra o arquivo `AE001.fasta` na pasta da `aula01`, copie e cole a sequência no campo **“Enter Query Sequence”**.
-**4**. Atente para os parâmetros da busca.
-**5**. Analise os resultados:
+**1**. Acesse a página do BLAST no NCBI: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">Clique aqui</a><br>
+**2**. Escolha “Nucleotide BLAST” (**blastn**).<br>
+**3**. Abra o arquivo `AE001.fasta` na pasta da `aula01`, copie e cole a sequência no campo **“Enter Query Sequence”**.<br>
+**4**. Atente para os parâmetros da busca.<br>
+**5**. Analise os resultados:<br>
    - A qual organismo a sequência pertence?
    - Qual o valor do e-value?
    - Qual o valor do bit-score?
