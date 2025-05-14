@@ -84,7 +84,7 @@ Sabendo destas informações, agora podemos montar a linha de comando que será 
 
 ```diamond blastx -d nr -q amostra.fastq -o amostra.daa -f 100```
 
-*Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável ```$PATH``` ou no mesmo diretório que você dispara a análise.*
+*Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável* ```$PATH``` *ou no mesmo diretório que você dispara a análise.*
 
 
 
