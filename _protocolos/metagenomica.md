@@ -68,9 +68,22 @@ Para uma análise de dados de shotgun de microbiomas, que geralmente consistem e
 O DIAMOND é um alinhador com um algoritmo otimizado para a estratégia seed-extend, utilizando um alfabeto reduzido para a correspondência entre as queries e o banco de dados. Além disso, o programa usa um sistema de duplo indexamento que exige menos memória para o processamento, otimizando também o tempo da análise (Buchfink et al. 2015). Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento, conforme podemos ver na tabela abaixo:
 
 <p style="text-align: center;">
-  <em>Tabela 1. Informações dos arquivos analisados.</em><br>
+  <em>Tabela 1. Número de reads de cada amostra.</em><br>
   <img src="{{ site.baseurl }}/images/tabela_reads.png" alt="Tabela 1 - Informações dos arquivos analisados" width="600">
 </p>
+
+Para realizar o alinhamento das sequências, é necessário dar o comando do DIAMOND juntamente com os parâmetros **obrigatórios** da análise. 
+- O **comando** ```diamond``` chama o programa.
+- Em seguida, precisamos especificar o **algoritmo** de alinhamento. Como temos sequências de DNA e queremos alinhá-las a um banco de referência de proteínas, usaremos o ```blastx```.
+- O alinhamento deve ser feito usando um **banco de dados de referência** com sequências indexadas e classificadas, como o banco de sequências de proteínas **nr**, do NCBI. Este parâmetro obrigatório da análise é determinado com o argumento ```-d nr```.
+- O arquivo de entrada (**input**), que contém as sequências, deve ser especificado com o argumento ```-q input.fastq```.
+- Para os arquivos de saída (**output**), é importante indicar o a extensão do diamond alignment archive, ou DAA, que especifica que este é o arquivo resultante da análise de alinhamento do programa DIAMOND. Para isso, é preciso adicionar ao comando o parâmetro ```-o output.daa``` e usar o argumento ```-f 100```, que irá formatar o output corretamente como DAA. Este formato é necessário para o passo de conversão do alinhamento posteriormente, com o programa MEGANIZER, permitindo que ele possa ser visualizado graficamente no MEGAN6.
+- Outros argumentos e parâmetros do DIAMOND podem ser observados com o comando de ajuda ```diamond help```.
+
+Sabendo destas informações, agora podemos montar a linha de comando que será utilizada nas análises:
+```diamond blastx -d nr -q amostra.fastq -o amostra.daa -f 100```
+
+*Lembre-se que você deve usar os paths (endereços) dos programas e dos arquivos que não estão no $PATH (variável de ambiente) ou no mesmo diretório que você dispara a análise.
 
 
 
