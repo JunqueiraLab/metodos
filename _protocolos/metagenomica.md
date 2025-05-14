@@ -146,7 +146,7 @@ Os gráficos abaixo estão em nível de Filo.
   <img src="{{ site.baseurl }}/images/megan2.png" alt="Megan1" width="900">
 </p>
 
-- ❓ Qual o filo mais abundante na sua amostra?\
+- ❓ Qual o filo mais abundante na sua amostra?
 - ❓ Qual a espécie mais abundante na sua amostra?
 
 
