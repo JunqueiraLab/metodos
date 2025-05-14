@@ -94,7 +94,8 @@ Para os reads curtos, o agrupamento taxonômico é feito usando o algoritmo naï
 
 Para realizar a classificação taxonômica e funcional, é necessário usar o programa MEGANIZER com um arquivo de [mapeamento - MEGAN MAP](https://software-ab.cs.uni-tuebingen.de/download/megan6/welcome.html){:target="_blank"}. O arquivo DAA gerado pelo DIAMOND pode ser “meganizado” com a seguinte linha de comando:
 
-``daa-meganizer -i nome_do_arquivo.daa -mdb path/para/megan-map-Feb2022.db -t 30```
+```daa-meganizer -i nome_do_arquivo.daa -mdb path/para/megan-map-Feb2022.db -t 30```
+
 ```-i``` indica o arquivo de entrada/input (ou seja, o arquivo .daa gerado no passo anterior).
 ```-mdb``` indica o endereço do arquivo de mapeamento para classificação taxonômica e funcional, que inclui as informações dos bancos de dados NCBI, GTDB, EC, eggNOG, InterPro2GO, SEED.
 ```-t 30``` é o comando que paraleliza o processamento do arquivo em 30 CPUs (neste exemplo). O número pode variar de acordo com a disponibilidade de CPUs e o default é 8.
