@@ -142,6 +142,14 @@ Para facilitar a visualização das abundâncias relativas, vamos criar um gráf
 
 Os gráficos abaixo estão em nível de Filo.
 
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan2.png" alt="Megan1" width="600">
+</p>
+
+- [ ] Qual o filo mais abundante na sua amostra?
+- [ ] Qual a espécie mais abundante na sua amostra?
+
+
 
 
 
