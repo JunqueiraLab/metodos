@@ -84,6 +84,7 @@ Analise os resultados e compare com os do BLAST online:
 Quer saber mais sobre o BLAST na linha de comando? 
 Acesse o <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/" target="_blank">BLAST® Command Line Applications User Manual</a>.
 
+
 [⬅ Voltar para a página principal](/metodos/)
 
 ---
