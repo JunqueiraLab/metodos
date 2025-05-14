@@ -126,7 +126,11 @@ Os dois últimos parâmetros determinam que os reads atribuídos aos táxons que
 
 Os parâmetros específicos do algoritmo LCA incluem as opções **naïve, weighted e long reads**. Para os dois últimos, a porcentagem de cobertura é usada para estabelecer a ponderação ou a porcentagem mínima de uma sequência codificadora a ser coberta (geralmente usados para reads longos ou dados montados de metagenomas).
 
-Por padrão, os círculos representam os táxons e nós da árvore. O tamanho dos círculos corresponde à abundância relativa de cada táxon na amostra, ou seja, é proporcional ao número de reads atribuído a um determinado táxon ou nó. Quando você clica em cada círculo, pode visualizar o número de reads atribuídos àquele táxon específico (**assigned**) e também à soma dos reads atribuídos a todos os táxons descendentes daquele nó (**summed**).
+[Por padrão, os círculos]([url](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)) representam os táxons e nós da árvore. O tamanho dos círculos corresponde à abundância relativa de cada táxon na amostra, ou seja, é proporcional ao número de reads atribuído a um determinado táxon ou nó. Quando você clica em cada círculo, pode visualizar o número de reads atribuídos àquele táxon específico (**assigned**) e também à soma dos reads atribuídos a todos os táxons descendentes daquele nó (**summed**). Você pode colapsar ou expandir os nós para interagir com seus resultados, escolhendo o nível taxonômico que deseja visualizar. Clique no botão **Rank*** e explore os dados, escolhendo o nível taxonômico que deseja visualizar. 
+
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan1.png" alt="Megan1" width="600">
+</p>
 
 
 
