@@ -108,7 +108,26 @@ Ao fim do processo, o arquivo DAA terá três blocos de informação de dados:
 2. todas as sequências alinhadas e todos os alinhamentos realizados contra as proteínas de referência;
 3. um bloco de informações adicionadas pelo MEGANIZER com as classificações taxonômicas e funcionais, juntamente com um índice de todos os reads alinhados.
 
-O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6, para exploração visual dos dados com uma interface gráfica e também pode ser exportado para o formato .megan, o que diminui significativamente seu tamanho.
+O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6.
+
+#### 📊 4.3. MEGAN6 🦣
+
+O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em computadores comuns. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
+
+Para abrir um arquivo DAA já “meganizado” ou um arquivo já exportado no formato ```.megan```, clique em ```File▸Open``` e então escolha o arquivo a ser analisado. Você deve escolher um dos arquivos que estão em formato megan no diretório **aula_03**. O programa irá mostrar a atribuição dos reads na árvore taxonômica do NCBI. Você pode expandir ou contrair a árvore nos sentidos horizontal e vertical para visualizar melhor. A barra de status na parte inferior da janela mostra as informações sobre o número de táxons sendo mostrado e dados sobre amostra, como o número de reads analisados e atribuídos. Os parâmetros utilizados na “meganização” também podem ser visualizados na barra de status e estão resumidos abaixo:
+
+• **MinScore** - limite mínimo do bitscore (default = 50.0)  
+• **MaxExpected** - limite máximo do e-value (default = 0.01)  
+• **TopPercent** - filtra os alinhamentos menos relevantes e considera apenas os que têm bitscore próximo ao melhor alinhamento. Isso é útil para reduzir a quantidade de dados redundantes e focar apenas nos alinhamentos mais informativos para cada read (default = 10.0)  
+• **MinSupportPercent** - limite mínimo da porcentagem de reads atribuídos a um determinado táxon (e seus descendentes) para que ele apareça na árvore taxonômica (default = 0.05)  
+• **MinSupport** - limite mínimo do número de reads atribuídos a um determinado táxon (e seus descendentes) para que ele apareça na árvore taxonômica  
+
+Os dois últimos parâmetros determinam que os reads atribuídos aos táxons que não atendem aos critérios devem ser contabilizados no nó imediatamente superior da árvore (em direção à raiz), até que um nível taxonômico seja alcançado com uma contagem de reads suficientemente alta.
+
+Os parâmetros específicos do algoritmo LCA incluem as opções **naïve, weighted e long reads**. Para os dois últimos, a porcentagem de cobertura é usada para estabelecer a ponderação ou a porcentagem mínima de uma sequência codificadora a ser coberta (geralmente usados para reads longos ou dados montados de metagenomas).
+
+Por padrão, os círculos representam os táxons e nós da árvore. O tamanho dos círculos corresponde à abundância relativa de cada táxon na amostra, ou seja, é proporcional ao número de reads atribuído a um determinado táxon ou nó. Quando você clica em cada círculo, pode visualizar o número de reads atribuídos àquele táxon específico (**assigned**) e também à soma dos reads atribuídos a todos os táxons descendentes daquele nó (**summed**).
+
 
 
 
