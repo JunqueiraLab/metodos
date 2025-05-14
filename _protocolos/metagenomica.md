@@ -86,6 +86,27 @@ Sabendo destas informações, agora podemos montar a linha de comando que será 
 
 *Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável* ```$PATH``` *ou no mesmo diretório que você dispara a análise.*
 
+#### ✅ 4.2. MEGANIZER – classificação taxonômica e funcional
+
+O programa DIAMOND gera um arquivo em formato DAA que contém as sequências alinhadas e seus respectivos alinhamentos. Estas informações são úteis para realizar a atribuição taxonômica e funcional (*binning*) das sequências. O programa MEGANIZER atua justamente neste passo, agrupando sequências e escrevendo um bloco adicional de resultados no final do arquivo DAA gerado no output do passo anterior.
+
+Para os reads curtos, o agrupamento taxonômico é feito usando o algoritmo naïve LCA (lowest common ancestor), com base na taxonomia do NCBI e do Genome Taxonomy Database (GTDB) (Huson et al. 2007). A atribuição funcional é realizada pela estratégia do melhor alinhamento (best hit) (Mitra et al. 2011), usando a classificação de vários bancos curados de proteínas como referência (EC, eggNOG, InterPro2GO, SEED).
+
+Para realizar a classificação taxonômica e funcional, é necessário usar o programa MEGANIZER com um arquivo de [mapeamento - MEGAN MAP](https://software-ab.cs.uni-tuebingen.de/download/megan6/welcome.html){:target="_blank"}. O arquivo DAA gerado pelo DIAMOND pode ser “meganizado” com a seguinte linha de comando:
+
+``daa-meganizer -i nome_do_arquivo.daa -mdb path/para/megan-map-Feb2022.db -t 30```
+```-i``` indica o arquivo de entrada/input (ou seja, o arquivo .daa gerado no passo anterior).
+```-mdb``` indica o endereço do arquivo de mapeamento para classificação taxonômica e funcional, que inclui as informações dos bancos de dados NCBI, GTDB, EC, eggNOG, InterPro2GO, SEED.
+```-t 30``` é o comando que paraleliza o processamento do arquivo em 30 CPUs (neste exemplo). O número pode variar de acordo com a disponibilidade de CPUs e o default é 8.
+
+Ao fim do processo, o arquivo DAA terá três blocos de informação de dados: 
+
+1. informação de identificação das proteínas de referência encontradas (headers) no seu conjunto de sequências;
+2. todas as sequências alinhadas e todos os alinhamentos realizados contra as proteínas de referência;
+3. um bloco de informações adicionadas pelo MEGANIZER com as classificações taxonômicas e funcionais, juntamente com um índice de todos os reads alinhados.
+
+O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6, para exploração visual dos dados com uma interface gráfica e também pode ser exportado para o formato .megan, o que diminui significativamente seu tamanho.
+
 
 
 
