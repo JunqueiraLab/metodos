@@ -5,67 +5,23 @@ permalink: /protocolos/metagenomica/
 ---
 [⬅ Voltar para a página principal](/metodos/)
 
-# 🧬 Metagenômica e Microbiomas
+# 🧬 Metagenômica e Microbiomas - Métodos computacionais 
 
-## Análise taxonômica de microbiomas
+O termo “microbioma” geralmente é utilizado para se referir à composição complexa de genes e genomas de microrganismos associados a ambientes, hospedeiros, tecidos e superfícies. Um dos grandes desafios na análise de microbiomas gerados por sequenciamento WGS é a atribuição de uma quantidade massiva de sequências a classes taxonômicas e funcionais. A principal metodologia utilizada para a classificação das sequências baseia-se na homologia de proteínas (Huson et al. 2007). Nessa abordagem, as sequências de nucleotídeos são traduzidas e alinhadas contra um banco de dados de referência de proteínas com identidade taxonômica e funcional conhecidas. Em seguida, os alinhamentos significativos resultantes são usados para atribuir as sequências a grupos taxonômicos e funcionais baseando-se em pontuações similares aos resultados gerados pelo BLAST. Tradicionalmente, as análises de microbiomas usam os bancos de proteínas como referência (Bağcı et al. 2021), que são mais conservadas do que as sequências nucleotídicas. Isso significa que é mais provável encontrar sequências similares em proteínas do mesmo táxon, mesmo que haja variações nas sequências de DNA. Além disso, uma compreensão biológica das vias metabólicas presentes em um determinado microbioma requer conhecimento detalhado das proteínas com função conhecida, o que permite uma melhor inferência funcional. Desta forma, diversos programas que computam sequências de microbiomas geradas por WGS, tem como abordagem central o alinhamento traduzido das sequências do microbioma contra o banco de dados NR do NCBI (Benson et al. 2005). Algoritmos otimizados foram desenvolvidos para dar maior rapidez aos alinhamentos, sem perder a precisão da atribuição taxonômica. 
 
-### 🦠 1. Da microbiologia aos metagenomas – um breve histórico
+O programa **DIAMOND** (Buchfink et al. 2015), por exemplo, é amplamente utilizado em análises metagenômicas. Ele é um alinhador otimizado para a estratégia _seed-extend_, utilizando um alfabeto reduzido para a correspondência entre as queries e o banco de dados (Buchfink et al. 2015). É possível alterar parâmetros de especificidade e pontuação de alinhamentos como no BLAST. A seguir, a atribuição taxonômica e funcional é feita pelo script **MEGANIZER**, implementado no programa **MEGAN6** (Huson et al. 2016). 
 
-Os microrganismos são parte fundamental da evolução do planeta Terra e habitam os mais diversos ambientes nos últimos 3 bilhões de anos. Foi a partir da ação de microrganismos que a atmosfera terrestre mudou e a produção de oxigênio desencadeou os processos evolutivos que culminaram na vida multicelular. A rápida capacidade de adaptação dos microrganismos explica, em parte, sua grande diversidade de espécies e a vasta variabilidade genética e metabólica (Gibbons & Gilbert 2015). Embora sejam invisíveis a olho nu, a vida microbiana é a mais diversa na Terra e apenas uma pequena porcentagem dessa diversidade é descrita (Whitman et al. 1998).
+Nesta aula, vamos usar conjuntos de dados metagenômicos de sequências curtas geradas em plataforma Illumina. As amostras foram sequenciadas com a metodologia de shotgun e, para as análises vamos utilizar os programas DIAMOND (Buchfink et al. 2015) e MEGAN6 (Huson et al. 2016). Estes programas são adequados para a análise de grandes conjuntos de dados (dezenas de milhões de reads) e permitem realizar uma abordagem comparativa dos microbiomas. A análise consiste nos seguintes passos principais:
 
-Os primeiros estudos de observação de bactérias foram feitos em 1683, por Antonie van Leeuwenhoek, que observou, pelo microscópio que ele próprio montou, cinco “animálculos” se movimentando em uma amostra de sua placa dentária. Em seguida, os trabalhos de Pasteur, Koch e outros estabeleceram as bases das interações entre hospedeiros e microrganismos, tanto na causa de doenças como em sua importância para a saúde e fisiologia. Estes trabalhos foram fundamentais para a padronização de estudos de causalidade de doenças infecciosas (postulados de Koch) e para o desenvolvimento de métodos de prevenção, diagnóstico e tratamento de doenças.
+- 1.	Alinhamento de todos os reads gerados contra o banco de dados de proteínas NR (NCBI), usando o DIAMOND (passo realizado no servidor).
+- 2.	Atribuição taxonômica e funcional dos alinhamentos resultantes usando o programa MEGANIZER do MEGAN6 (passo realizado no servidor).
+- 3.	Exploração dos dados interativa usando o MEGAN6 (no seu computador).
 
-Já em 1917, a importância da colonização de microrganismos residentes que conferem efeitos protetivos a seus hospedeiros foi proposta por Alfred Nissle, que notou que alguns soldados eram resistentes aos surtos de disenteria durante a Primeira Guerra. Ao isolar a bactéria causadora do surto, ele relatou que alguns microrganismos associados ao intestino humano impediam o estabelecimento de patógenos no mesmo nicho. A linhagem de *Escherichia coli* isolada por Nissle até hoje é usada como probiótico (Sonnenborn 2016).
+Após o alinhamento e a atribuição taxonômica e funcional feita em um servidor, é possível analisar os dados em um computador com menor poder de processamento. Devido à restrição do poder computacional dos desktops no LIG, vamos usar os dados processados em um servidor, mas todos os passos da análise serão simulados em aula. 
 
-Na mesma época, estudos sobre imunidade realizados por Mechnikov e sobre a fisiologia infantil conduzidos por Escherich levaram ao reconhecimento de que algumas espécies bacterianas tinham efeitos benéficos e estavam envolvidas na digestão, saúde e envelhecimento.
+## 💎 1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun
 
-Apesar dos avanços no cultivo de microrganismos no século XX, logo ficou evidente que havia discrepâncias significativas entre o número de células observadas no microscópio e as que eram cultivadas com sucesso em laboratório. Esta discrepância ficou conhecida como “a grande anomalia da contagem em placas” e se deve a uma variedade de fatores, incluindo taxas de crescimento lentas, exigências de crescimento específicas e dependências de relações simbióticas. Esta anomalia motivou o desenvolvimento de abordagens moleculares para identificar microrganismos não cultiváveis na década de 80. Estudos pioneiros foram feitos por Carl Woese e colaboradores, que estabeleceram a existência de um novo domínio na Árvore da Vida, hoje conhecido como *Archaea* (Woese & Fox 1977; Woese et al. 1990).
-
-As técnicas moleculares desenvolvidas com o advento da reação em cadeia da polimerase (PCR) (Mullis et al. 1986) e do sequenciamento de DNA (Sanger et al. 1977) foram aplicadas para estudar comunidades microbianas associadas a diferentes ambientes e hospedeiros, proporcionando uma visão sem precedentes de sua composição e diversidade. Os avanços recentes na tecnologia de sequenciamento de nova geração (NGS) e nas técnicas computacionais, permitem que genes e até mesmo genomas microbianos completos (Parks et al. 2017) sejam recuperados diretamente de amostras, contornando a necessidade de amplificação e cultivo laboratorial.
-
-### 🧬 2. Metagenômica e Microbiomas
-
-O termo metagenômica foi utilizado pela primeira vez em 1998 (Handelsman et al. 1998) para se referir a uma metodologia para a obtenção do DNA total de amostras de solo sem a necessidade de cultivo e isolamento de linhagens puras de microrganismos. O prefixo “meta” tem etimologia grega (metá) e significa “além de; para além de”. Portanto, o termo metagenoma foi utilizado para referir-se a todo o material genético presente em uma amostra ambiental, composto pelos genomas de diversos organismos individuais. De acordo com a metodologia proposta pelos autores, fragmentos longos do DNA extraído das amostras seriam clonados em vetores de clonagem e inseridos em organismos cultiváveis como *E. coli*, permitindo que a atividade biológica dos clones fosse testada. Esta coleção de clones representaria então o “metagenoma” do solo e a expressão de uma coleção de genes permitiria a prospecção de enzimas com funções desconhecidas. Os resultados dos pesquisadores mostraram uma grande diversidade genética presente neste banco de clones.
-
-O termo também foi aplicado para descrever alguns estudos de genômica ambiental no início dos anos 2000, como os que utilizaram uma abordagem de sequenciamento *shotgun* de genomas em amostras de DNA ambiental com o intuito de testar se as abordagens genômicas desenvolvidas no Projeto Genoma Humano poderiam ser aplicadas com eficácia na descoberta de novos genes e espécies (Venter et al. 2004).
-
-No entanto, a popularização dos trabalhos em metagenomas veio com o uso da amplificação e sequenciamento do gene para a subunidade 16S do RNA ribossomal (rRNA), amplamente utilizado para a identificação taxonômica e estimativa da diversidade procariótica. Esta técnica é similar à que Woese e Fox utilizaram para descrever o domínio *Archaea* (Woese & Fox 1977), mas a metodologia não é considerada uma análise metagenômica no sentido estrito. O sequenciamento do gene codificador do rRNA 16S se baseia na ubiquidade deste gene em procariotos, sendo portanto um marcador universal para bactérias e arqueas. O gene contém regiões conservadas e hipervariáveis. As regiões conservadas são utilizadas para desenhar primers que amplificam por PCR as regiões variáveis. Após o sequenciamento, as regiões variáveis do gene 16S rRNA podem ser usadas para identificar especificamente qual bactéria está presente na amostra. Apesar de sua popularidade, a análise de um marcador molecular não permite analisar a diversidade funcional de comunidades microbianas por não acessar todo o conteúdo gênico presente nas amostras, além de não considerar táxons virais e eucarióticos potencialmente importantes para a comunidade, já que estes organismos não compartilham o mesmo marcador. No entanto, essa abordagem fornece estimativas qualitativas consistentes dos membros procarióticos, embora seja necessário ter cuidado com os aspectos quantitativos (Chouvarine et al. 2015).
-
-Com o barateamento do sequenciamento de genomas e o acesso a plataformas NGS, estudos metagenômicos baseados na técnica *whole genome shotgun* (WGS) se tornaram mais comuns somente na última década. O sequenciamento WGS não depende da amplificação de um gene específico e sequencia todo o material genético presente em uma amostra. Portanto, não é um método específico para bactérias e permite a avaliação de vírus, fungos, protistas e DNA do hospedeiro. Por não depender de amplificação ou conjuntos de primers específicos, esse método é menos enviesado do que o sequenciamento do gene 16S. Além da identificação taxonômica dos organismos até os níveis de espécie e linhagem, a metagenômica WGS trouxe uma maior precisão às inferências funcionais relacionadas às comunidades microbianas por permitir uma análise ampla do conteúdo gênico presente nas amostras, facilitando a associação deste conteúdo a vias metabólicas e permitindo também a identificação de genes específicos associados à patogenicidade e resistência a antimicrobianos (Quince et al. 2017).
-
-Este aumento massivo no sequenciamento metagenômico foi acompanhado pela ampliação de bancos de dados públicos, pelo aumento do poder computacional e pelo desenvolvimento de novas abordagens bioinformáticas. Em conjunto, estas inovações metodológicas foram cruciais para o estudo de microbiomas. O termo “microbioma” geralmente é utilizado para se referir à composição complexa de genes e genomas de microrganismos associados a ambientes, hospedeiros, tecidos e superfícies. Os últimos anos testemunharam o surgimento de análises de alta resolução do microbioma humano e de outros hospedeiros, de ecossistemas terrestres e as primeiras iniciativas de análise de microbiomas urbanos.
-
-### 💻 3. Métodos computacionais de análise de microbiomas
-
-Um dos grandes desafios na análise de microbiomas gerados por sequenciamento WGS é a atribuição de uma quantidade massiva de sequências a classes taxonômicas e funcionais. Geralmente, a principal metodologia utilizada para a classificação das sequências baseia-se na homologia de proteínas (Huson et al. 2007). Nessa abordagem, as sequências de nucleotídeos geradas são traduzidas e alinhadas contra um banco de dados de referência com sequências de proteínas com identidade taxonômica e funcional conhecidas. Em seguida, os alinhamentos significativos resultantes são usados para atribuir as sequências a grupos taxonômicos e funcionais baseando-se em pontuações similares aos resultados gerados pelo BLAST.
-
-Tradicionalmente as análises de microbiomas usam os bancos de proteínas como referência, embora o alinhamento de DNA contra um banco de sequências nucleotídicas ou genômicas também seja viável. No entanto, existem algumas questões de ordem técnica relacionadas ao alinhamento DNA-DNA. A primeira é que os bancos de referência genômica cobrem apenas uma parte do espectro taxonômico e funcional dos microbiomas presentes em amostras ambientais (Bağcı et al. 2021), sendo muito menores em composição e diversidade que os bancos de proteínas. Segundo, a alta redundância das sequências genômicas de organismos proximamente relacionados causa problemas de desempenho computacional quando as sequências de consulta exibem um grande número de alinhamentos igualmente bons. Neste sentido, a variação genômica intraespecífica pode ocasionar a dispersão de sequências em muitas linhagens e a acurácia da atribuição taxonômica diminui.
-
-O alinhamento traduzido melhora esses problemas em certa medida, pois as sequências de proteínas são mais conservadas do que as sequências nucleotídicas. Isso significa que é mais provável encontrar sequências similares em proteínas do mesmo táxon, mesmo que haja variações nas sequências de DNA. Por fim, uma compreensão biológica adequada dos processos dentro de um determinado microbioma requer conhecimento detalhado das proteínas com função conhecida, o que permite uma melhor inferência funcional.
-
-Desta forma, diversos programas que computam sequências de microbiomas geradas por WGS, têm como abordagem central o alinhamento traduzido das sequências do microbioma contra o banco de dados NR do NCBI (Benson et al. 2005). Tradicionalmente, o algoritmo mais adequado para alinhar os dados de sequências seria o BLASTX (Altschul et al. 1997), mas com o aumento exponencial das sequências de referência depositadas no NCBI-nr (~720 milhões de sequências em julho de 2024) e com a grande quantidade de sequências geradas por plataformas NGS, esta abordagem se tornou muito lenta, mesmo para dados analisados em supercomputadores.
-
-Para contornar este problema, algoritmos otimizados foram desenvolvidos para substituir o BLASTX, permitindo um desempenho 20 mil vezes maior na fase de alinhamento, sem perder a precisão da atribuição taxonômica. O DIAMOND (Buchfink et al. 2015) e o Kaiju (Menzel et al. 2019) são alguns destes programas otimizados, amplamente utilizados em análises metagenômicas de grandes conjuntos de dados.
-
-Nestes programas, a análise de sequências curtas (100 a 300 pb), como as geradas em plataforma Illumina, normalmente é feita pela determinação dos alinhamentos de maior pontuação contra um conjunto de sequências de referência, seguida pela atribuição a bins taxonômicos e funcionais, usando metodologias heurísticas como a abordagem LCA (lowest common ancestor) para a taxonomia e a abordagem do melhor alinhamento (best hit) para atribuição funcional (Huson et al. 2016).
-
-Recentemente, metodologias alternativas têm sido desenvolvidas para a análise metagenômica com sequências longas (reads com milhares de pares de base) provenientes de plataformas NGS como PacBio e Nanopore, ou para conjuntos de metagenomas previamente montados (Li et al. 2016; Blanco-Miguez et al. 2022). Nestes casos, os algoritmos são modificados durante o alinhamento e o agrupamento taxonômico. No geral, sequências curtas tendem a gerar melhores resultados quando não são montadas, mesmo que pareça paradoxal. Isto ocorre quando a quantidade de reads gerados não é alta o suficiente para gerar montagens contíguas e com alta cobertura, suficientes para prover uma atribuição taxonômica confiável que reflita a diversidade de microrganismos na amostra. Já nos casos da metagenômica com sequências longas, a montagem prévia do conjunto de dados parece ser uma estratégia interessante e algumas vezes pode gerar genomas completos de microrganismos presentes na amostra.
-
-Portanto, existem protocolos específicos para a análise de microbiomas que dependem da forma como as sequências foram geradas.
-
-### ⚙️ 4. Pipeline e os requisitos de hardware e software
-
-Neste curso, vamos usar conjuntos de dados metagenômicos de sequências curtas geradas em plataforma Illumina. As amostras foram sequenciadas com a metodologia de shotgun e, para as análises vamos utilizar os programas DIAMOND (Buchfink et al. 2015) e MEGAN6 (Huson et al. 2016). Estes programas são adequados para a análise de grandes conjuntos de dados (centenas de milhões de reads) e permitem realizar uma abordagem comparativa dos microbiomas. A análise consistirá nos seguintes passos principais:
-
-1. Alinhamento de todos os reads contra um banco de dados de referência com sequências de proteínas, usando o DIAMOND (realizado no servidor).
-2. Atribuição taxonômica e funcional dos alinhamentos resultantes usando o programa MEGANIZER do MEGAN6 (realizado no servidor).
-3. Exploração dos dados interativa usando o MEGAN6 (no seu computador).
-
-Para uma análise de dados de shotgun de microbiomas, que geralmente consistem em arquivos grandes com milhões de sequências de várias amostras, o ideal é computar os dados em um servidor com vários núcleos para processamento paralelo, pelo menos 64 GB de memória RAM disponíveis e com um HD com espaço suficiente para armazenar os arquivos de sequências, os arquivos temporários que são gerados durante a análise e os bancos de sequências de referência indexados. Uma vez tendo realizado o alinhamento e a atribuição taxonômica em um servidor, é possível analisar os dados interativamente em um computador com menor poder de processamento. Devido à restrição do poder computacional dos desktops no LIG, vamos usar os dados processados em um servidor, mas todos os passos da análise serão simulados em aula.
-
-#### 💎 4.1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun
-
-O DIAMOND é um alinhador com um algoritmo otimizado para a estratégia seed-extend, utilizando um alfabeto reduzido para a correspondência entre as queries e o banco de dados. Além disso, o programa usa um sistema de duplo indexamento que exige menos memória para o processamento, otimizando também o tempo da análise (Buchfink et al. 2015). Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento, conforme podemos ver na tabela abaixo:
+Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento (Tabela 1).
 
 <p style="text-align: center;">
   <em>Tabela 1. Número de reads de cada amostra.</em><br>
@@ -84,13 +40,13 @@ Sabendo destas informações, agora podemos montar a linha de comando que será 
 
 ```diamond blastx -d nr -q amostra.fastq -o amostra.daa -f 100```
 
-*Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável* ```$PATH``` *ou no mesmo diretório que você dispara a análise.*
+_Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável_ `$PATH` _ou no mesmo diretório que você dispara a análise._
 
-#### ✅ 4.2. MEGANIZER – classificação taxonômica e funcional
+## 📊 2. MEGANIZER – classificação taxonômica e funcional
 
-O programa DIAMOND gera um arquivo em formato DAA que contém as sequências alinhadas e seus respectivos alinhamentos. Estas informações são úteis para realizar a atribuição taxonômica e funcional (*binning*) das sequências. O programa MEGANIZER atua justamente neste passo, agrupando sequências e escrevendo um bloco adicional de resultados no final do arquivo DAA gerado no output do passo anterior.
+O programa DIAMOND gera um arquivo em formato DAA que contém as sequências alinhadas e seus respectivos alinhamentos. Estas informações são úteis para realizar a atribuição taxonômica e funcional (_binning_) das sequências. O programa MEGANIZER atua justamente neste passo, agrupando sequências e escrevendo um bloco adicional de resultados no final do arquivo DAA gerado no output do passo anterior.
 
-Para os reads curtos, o agrupamento taxonômico é feito usando o algoritmo naïve LCA (lowest common ancestor), com base na taxonomia do NCBI e do Genome Taxonomy Database (GTDB) (Huson et al. 2007). A atribuição funcional é realizada pela estratégia do melhor alinhamento (best hit) (Mitra et al. 2011), usando a classificação de vários bancos curados de proteínas como referência (EC, eggNOG, InterPro2GO, SEED).
+Para os reads curtos, o agrupamento taxonômico é feito usando o algoritmo naïve LCA (_lowest common ancestor_), com base na taxonomia do NCBI e do Genome Taxonomy Database (GTDB) (Huson et al. 2007). A atribuição funcional é realizada pela estratégia do melhor alinhamento (_best hit_) (Mitra et al. 2011), usando a classificação de vários bancos curados de proteínas como referência (EC, eggNOG, InterPro2GO, SEED).
 
 Para realizar a classificação taxonômica e funcional, é necessário usar o programa MEGANIZER com um arquivo de [mapeamento - MEGAN MAP](https://software-ab.cs.uni-tuebingen.de/download/megan6/welcome.html){:target="_blank"}. O arquivo DAA gerado pelo DIAMOND pode ser “meganizado” com a seguinte linha de comando:
 
@@ -110,7 +66,7 @@ Ao fim do processo, o arquivo DAA terá três blocos de informação de dados:
 
 O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6.
 
-#### 📊 4.3. MEGAN6 🦣
+## 🦣 3. MEGAN6 
 
 O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em computadores comuns. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
 
@@ -124,8 +80,6 @@ Para abrir um arquivo DAA já “meganizado” ou um arquivo já exportado no fo
 
 Os dois últimos parâmetros determinam que os reads atribuídos aos táxons que não atendem aos critérios devem ser contabilizados no nó imediatamente superior da árvore (em direção à raiz), até que um nível taxonômico seja alcançado com uma contagem de reads suficientemente alta.
 
-Os parâmetros específicos do algoritmo LCA incluem as opções **naïve, weighted e long reads**. Para os dois últimos, a porcentagem de cobertura é usada para estabelecer a ponderação ou a porcentagem mínima de uma sequência codificadora a ser coberta (geralmente usados para reads longos ou dados montados de metagenomas).
-
 Por padrão, os círculos representam os táxons e nós da árvore. O tamanho dos círculos corresponde à abundância relativa de cada táxon na amostra, ou seja, é proporcional ao número de reads atribuído a um determinado táxon ou nó. Quando você clica em cada círculo, pode visualizar o número de reads atribuídos àquele táxon específico (**assigned**) e também à soma dos reads atribuídos a todos os táxons descendentes daquele nó (**summed**). 
 
 <p style="text-align: center;">
@@ -134,13 +88,13 @@ Por padrão, os círculos representam os táxons e nós da árvore. O tamanho do
 
 Você pode colapsar ou expandir os nós para interagir com seus resultados, escolhendo o nível taxonômico que deseja visualizar. 
 
-- Clique no botão `Rank` e explore os dados, escolhendo o nível taxonômico que deseja visualizar.
+- ▶️ Clique no botão `Rank` e explore os dados, escolhendo o nível taxonômico que deseja visualizar.
   
 Para facilitar a visualização das abundâncias relativas, vamos criar um gráfico no nível taxonômico que você escolher. As folhas da árvore taxonômica precisam estar selecionadas para isso. A seleção é feita automaticamente quando você escolhe o ranqueamento taxonômico com o botão `Rank`. 
 
-- Para gerar o gráfico, clique em `Show chart` no menu de opções e escolha `Show Bubble Chart`, ou `Show Stacked Bar Chart`. Uma nova janela vai abrir com o gráfico e você pode ordenar os táxons por ordem crescente ou decrescente do número de reads clicando no menu à esquerda.
+- ▶️ Para gerar o gráfico, clique em `Show chart` no menu de opções e escolha `Show Bubble Chart`, ou `Show Stacked Bar Chart`. Uma nova janela vai abrir com o gráfico e você pode ordenar os táxons por ordem crescente ou decrescente do número de reads clicando no menu à esquerda.
 
-Os gráficos abaixo estão em nível de Filo.
+Os gráficos abaixo estão em nível taxonômico de Filo.
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/megan2.png" alt="Megan1" width="900">
