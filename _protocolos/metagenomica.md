@@ -83,7 +83,7 @@ Os dois últimos parâmetros determinam que os reads atribuídos aos táxons que
 Por padrão, os círculos representam os táxons e nós da árvore. O tamanho dos círculos corresponde à abundância relativa de cada táxon na amostra, ou seja, é proporcional ao número de reads atribuído a um determinado táxon ou nó. Quando você clica em cada círculo, pode visualizar o número de reads atribuídos àquele táxon específico (**assigned**) e também à soma dos reads atribuídos a todos os táxons descendentes daquele nó (**summed**). 
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan1.png" alt="Megan1" width="600">
+  <img src="{{ site.baseurl }}/images/megan1.png" alt="Megan1" width="400">
 </p>
 
 Você pode colapsar ou expandir os nós para interagir com seus resultados, escolhendo o nível taxonômico que deseja visualizar. 
@@ -132,7 +132,7 @@ Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguinte
 O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="500">
+  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="300">
 </p>
 
 - ❓ Qual a diversidade encontrada na sua amostra?
@@ -152,7 +152,7 @@ A diversidade beta é uma medida comparativa entre as amostras, por isso um novo
 - ▶️ Clique no botão Apply 
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="400">
+  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="300">
 </p>
 
 Após o processamento de todas as amostras, uma nova janela vai abrir com a árvore taxonômica que agora inclui as seis amostras que estamos analisando. Salve o arquivo com as amostras comparadas e feche os outros arquivos para evitar uso desnecessário de memória e CPU no seu computador. 
@@ -173,9 +173,10 @@ Com o arquivo comparativo gerado, agora é possível também comparar o perfil t
 - ▶️ Clique no botão `Rank` e escolha o nível taxonômico `Phylum`
 - ▶️ Clique no botão `Show Chart` e escolha `Stacked Bar Chart`
 - ▶️ Para ordenar o gráfico por ordem decrescente de reads atribuídos, clique na aba de `Classes` no menu à esquerda e então no botão para ordenação decrescente dos reads
-- <p style="text-align: center;">
+<p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/megan5.png" alt="Megan5" width="200">
 </p>
+
 - ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="200">
