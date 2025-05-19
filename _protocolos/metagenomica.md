@@ -131,6 +131,37 @@ Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguinte
 
 O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="800">
+</p>
+
+- ❓ Qual a diversidade encontrada na sua amostra?
+- ❓ Como ela se compara às diversidades encontradas nas outras amostras analisadas pelos grupos?
+- ❓ O índice de diversidade mudou a sua percepção de como a sua amostra se compara às dos demais grupos?
+
+#### 4.2. Diversidade Beta
+
+A diversidade beta quantifica a diferença na composição das comunidades biológicas entre amostras. Originalmente, a diversidade beta foi definida como a razão entre a diversidade global encontrada nas amostras (diversidade gama) e a diversidade local (diversidade alfa) (Whittaker 1972). Atualmente, a maioria das métricas de diversidade beta é baseada em medidas de dissimilaridade, sendo que a dissimilaridade de Bray-Curtis e a distância de UniFrac ponderada e não ponderada (Ismail 2023) são os índices mais utilizados em análises metagenômicas.
+
+Para realizar o cálculo da diversidade beta, vamos utilizar a dissimilaridade de Bray-Curtis, cujo cálculo está implementado no MEGAN6. Este índice leva em consideração a abundância dos táxons em cada amostra diferente. A distância é calculada para cada par de amostras e uma matriz de distância é gerada, que pode ser visualizada em forma de um gráfico de coordenadas principais (PCoA), também conhecido como escalonamento multidimensional (MDS). O PCoA produz um conjunto de eixos não correlacionados (ortogonais) para resumir a variabilidade no conjunto de dados. Cada eixo possui um valor, cuja magnitude indica a quantidade de variação capturada nesse eixo (Buttigieg & Ramette 2014). A distância entre os pontos no gráfico representa a distância entre as amostras, calculadas na matriz. A interpretação de um gráfico de PCoA é direta: objetos ordenados próximos uns dos outros são mais similares do que aqueles ordenados mais distantes.
+
+A diversidade beta é uma medida comparativa entre as amostras, por isso um novo arquivo precisa ser gerado a partir do processamento dos arquivos das amostras individuais. Para isso, abra **todos** os arquivos `.megan` que estão no diretório **aula_03**. Quando todos os arquivos tiverem carregado, clique em `File▸Compare`. Uma nova janela vai abrir, com a lista de todos os arquivos abertos. Para criarmos um arquivo com todas as amostras, siga os seguinte passos:
+
+- ▶️ Clique no botão Select All
+- ▶️ Escolha a opção Use Normalized Counts e Ignore all unassigned reads
+- ▶️ Clique no botão Apply 
+
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="600">
+</p>
+
+Após o processamento de todas as amostras, uma nova janela vai abrir com a árvore taxonômica que agora inclui as seis amostras que estamos analisando. Salve o arquivo com as amostras comparadas e feche os outros arquivos para evitar uso desnecessário de memória e CPU no seu computador. 
+
+Para calcular a diversidade beta das amostras, siga as seguintes instruções:
+
+- ▶️ Certifique-se de que a opção `Tree▸Keep Non-Prokaryotes Collapsed` está marcada ✔️
+- ▶️ Clique no botão `Rank` e escolha o nível taxonômico `Species`
+- ▶️ Agora clique no botão `Open a cluster analysis window`
 
 
 
