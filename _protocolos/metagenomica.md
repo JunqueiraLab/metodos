@@ -179,12 +179,12 @@ Com o arquivo comparativo gerado, agora é possível também comparar o perfil t
 - ▶️ Clique no botão `Show Chart` e escolha `Stacked Bar Chart`
 - ▶️ Para ordenar o gráfico por ordem decrescente de reads atribuídos, clique na aba de `Classes` no menu à esquerda e então no botão para ordenação decrescente dos reads
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan5.png" alt="Megan5" width="200">
+  <img src="{{ site.baseurl }}/images/megan5.png" alt="Megan5" width="250">
 </p>
 
 - ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="150">
+  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="100">
 </p>
 
 - ❓ Todas as amostras tem a mesma composição de Filos bacterianos?
