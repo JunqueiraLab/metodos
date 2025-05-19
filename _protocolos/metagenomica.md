@@ -132,7 +132,7 @@ Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguinte
 O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="800">
+  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="500">
 </p>
 
 - ❓ Qual a diversidade encontrada na sua amostra?
@@ -152,7 +152,7 @@ A diversidade beta é uma medida comparativa entre as amostras, por isso um novo
 - ▶️ Clique no botão Apply 
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="600">
+  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="400">
 </p>
 
 Após o processamento de todas as amostras, uma nova janela vai abrir com a árvore taxonômica que agora inclui as seis amostras que estamos analisando. Salve o arquivo com as amostras comparadas e feche os outros arquivos para evitar uso desnecessário de memória e CPU no seu computador. 
@@ -162,6 +162,34 @@ Para calcular a diversidade beta das amostras, siga as seguintes instruções:
 - ▶️ Certifique-se de que a opção `Tree▸Keep Non-Prokaryotes Collapsed` está marcada ✔️
 - ▶️ Clique no botão `Rank` e escolha o nível taxonômico `Species`
 - ▶️ Agora clique no botão `Open a cluster analysis window`
+
+- ❓ O que a PCoA da diversidade beta indica sobre as amostras individuais e sobre os grupos experimentais?
+
+### 🔍 5. Análise comparativa 
+
+Com o arquivo comparativo gerado, agora é possível também comparar o perfil taxonômico das amostras e revelar padrões específicos de composição dos microbiomas de diferentes grupos experimentais. Para gerar um gráfico comparativo, siga os seguintes passos:
+
+- ▶️ Certifique-se de que a opção `Tree▸Keep Non-Prokaryotes Collapsed` está marcada ✔️
+- ▶️ Clique no botão `Rank` e escolha o nível taxonômico `Phylum`
+- ▶️ Clique no botão `Show Chart` e escolha `Stacked Bar Chart`
+- ▶️ Para ordenar o gráfico por ordem decrescente de reads atribuídos, clique na aba de `Classes` no menu à esquerda e então no botão para ordenação decrescente dos reads
+- <p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan5.png" alt="Megan5" width="200">
+</p>
+- ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="200">
+</p>
+
+- ❓ Todas as amostras tem a mesma composição de Filos bacterianos?
+- ❓ Quais filos são característicos de cada grupo experimental?
+
+Agora repita os mesmos passos acima, mas para o nível taxonômico de **espécies**. 
+
+- ❓ Quais são as espécies mais abundantes em cada grupo experimental?
+- ❓ Procure informações sobre estas espécies bacterianas que estão colonizando os grupos experimentais
+
+
 
 
 
