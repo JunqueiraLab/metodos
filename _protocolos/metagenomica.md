@@ -19,6 +19,7 @@ Nesta aula, vamos usar conjuntos de dados metagenômicos de sequências curtas g
 
 Após o alinhamento e a atribuição taxonômica e funcional feita em um servidor, é possível analisar os dados em um computador com menor poder de processamento. Devido à restrição do poder computacional dos desktops no LIG, vamos usar os dados processados em um servidor, mas todos os passos da análise serão simulados em aula. 
 
+---
 ### 💎 1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun
 
 Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento (Tabela 1).
@@ -42,6 +43,7 @@ Sabendo destas informações, agora podemos montar a linha de comando que será 
 
 _Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável_ `$PATH` _ou no mesmo diretório que você dispara a análise._
 
+---
 ### 📊 2. MEGANIZER – classificação taxonômica e funcional
 
 O programa DIAMOND gera um arquivo em formato DAA que contém as sequências alinhadas e seus respectivos alinhamentos. Estas informações são úteis para realizar a atribuição taxonômica e funcional (_binning_) das sequências. O programa MEGANIZER atua justamente neste passo, agrupando sequências e escrevendo um bloco adicional de resultados no final do arquivo DAA gerado no output do passo anterior.
@@ -66,6 +68,7 @@ Ao fim do processo, o arquivo DAA terá três blocos de informação de dados:
 
 O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6.
 
+---
 ### 🦣 3. MEGAN6 
 
 O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em computadores comuns. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
@@ -103,6 +106,7 @@ Os gráficos abaixo estão em nível taxonômico de Filo.
 - ❓ Qual o filo mais abundante na sua amostra?
 - ❓ Qual a espécie mais abundante na sua amostra?
 
+---
 ### 🧫 4.	Análise de Diversidade
 
 As análises de diversidade de comunidades microbianas permitem avaliar a heterogeneidade taxonômica encontrada em amostras, além de indicar se a distribuição de espécies nas amostras ocorre uniformemente. Em alguns casos, a homeostase de sistemas pode ser avaliada a partir de índices de diversidade, sendo, portanto, uma medida indicativa das condições boas ou ruins de tecidos, órgãos ou mesmo do ambiente. A diversidade do microbioma pode ser avaliada por meio de múltiplos índices ecológicos, que podem ser divididos em dois tipos de medidas: **diversidade alfa** e **diversidade beta** (Calle 2019). A diversidade **alfa** mede a variabilidade das espécies **dentro de uma amostra**, enquanto a diversidade **beta** considera as diferenças na composição microbiana **entre as amostras**.
@@ -132,7 +136,7 @@ Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguinte
 O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="300">
+  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="400">
 </p>
 
 - ❓ Qual a diversidade encontrada na sua amostra?
@@ -152,7 +156,7 @@ A diversidade beta é uma medida comparativa entre as amostras, por isso um novo
 - ▶️ Clique no botão Apply 
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="300">
+  <img src="{{ site.baseurl }}/images/megan4.png" alt="Megan4" width="400">
 </p>
 
 Após o processamento de todas as amostras, uma nova janela vai abrir com a árvore taxonômica que agora inclui as seis amostras que estamos analisando. Salve o arquivo com as amostras comparadas e feche os outros arquivos para evitar uso desnecessário de memória e CPU no seu computador. 
@@ -165,6 +169,7 @@ Para calcular a diversidade beta das amostras, siga as seguintes instruções:
 
 - ❓ O que a PCoA da diversidade beta indica sobre as amostras individuais e sobre os grupos experimentais?
 
+---
 ### 🔍 5. Análise comparativa 
 
 Com o arquivo comparativo gerado, agora é possível também comparar o perfil taxonômico das amostras e revelar padrões específicos de composição dos microbiomas de diferentes grupos experimentais. Para gerar um gráfico comparativo, siga os seguintes passos:
@@ -179,7 +184,7 @@ Com o arquivo comparativo gerado, agora é possível também comparar o perfil t
 
 - ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="200">
+  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="030">
 </p>
 
 - ❓ Todas as amostras tem a mesma composição de Filos bacterianos?
@@ -190,8 +195,16 @@ Agora repita os mesmos passos acima, mas para o nível taxonômico de **espécie
 - ❓ Quais são as espécies mais abundantes em cada grupo experimental?
 - ❓ Procure informações sobre estas espécies bacterianas que estão colonizando os grupos experimentais
 
+---
+### 🔍 6. Rarefação
 
+A rarefação é uma medida que indica se as amostras foram sequenciadas com profundidade suficiente para de fato serem utilizadas como uma medida da diversidade da comunidade microbiana. Nas análises de rarefação, a riqueza de espécies (ou a diversidade alfa) é calculada em subamostras de reads e serve como uma medida da identificação redundante de táxons no seu conjunto de dados. Quando seus dados foram exaustivamente sequenciados, a curva de rarefação atinge um _plateau_, indicando que a amostragem de novos reads contribui muito pouco para a descoberta de novas espécies na amostra. Quando o _plateau_ não é atingido, suas análises de diversidade e identificação taxonômica podem estar subestimando a presença de microrganismos da comunidade, principalmente as espécies mais raras. Portanto, a profundidade de sequenciamento é fundamental para a rarefação. 
 
+- ▶️ Calcule a rarefação usando o arquivo de comparação de amostras, clicando no menu `Window▸Rarefaction Analysis`.
+- ❓ o	Qual a sua conclusão sobre a diversidade do microbioma das amostras como função da profundidade de sequenciamento?
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/megan7.png" alt="Megan7" width="300">
+</p>
 
 
 ---
