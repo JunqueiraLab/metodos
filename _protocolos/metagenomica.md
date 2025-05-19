@@ -19,7 +19,7 @@ Nesta aula, vamos usar conjuntos de dados metagenômicos de sequências curtas g
 
 Após o alinhamento e a atribuição taxonômica e funcional feita em um servidor, é possível analisar os dados em um computador com menor poder de processamento. Devido à restrição do poder computacional dos desktops no LIG, vamos usar os dados processados em um servidor, mas todos os passos da análise serão simulados em aula. 
 
-## 💎 1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun
+### 💎 1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun
 
 Os conjuntos de dados que vamos utilizar foram gerados na plataforma Illumina em uma corrida paired-end. Cada arquivo analisado tem, em média, 45 milhões de reads com 251 bases de comprimento (Tabela 1).
 
@@ -42,7 +42,7 @@ Sabendo destas informações, agora podemos montar a linha de comando que será 
 
 _Lembre-se que você deve usar os paths (endereços) completos dos programas e dos arquivos que não estão na variável_ `$PATH` _ou no mesmo diretório que você dispara a análise._
 
-## 📊 2. MEGANIZER – classificação taxonômica e funcional
+### 📊 2. MEGANIZER – classificação taxonômica e funcional
 
 O programa DIAMOND gera um arquivo em formato DAA que contém as sequências alinhadas e seus respectivos alinhamentos. Estas informações são úteis para realizar a atribuição taxonômica e funcional (_binning_) das sequências. O programa MEGANIZER atua justamente neste passo, agrupando sequências e escrevendo um bloco adicional de resultados no final do arquivo DAA gerado no output do passo anterior.
 
@@ -66,7 +66,7 @@ Ao fim do processo, o arquivo DAA terá três blocos de informação de dados:
 
 O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGAN6.
 
-## 🦣 3. MEGAN6 
+### 🦣 3. MEGAN6 
 
 O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em computadores comuns. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
 
@@ -103,8 +103,33 @@ Os gráficos abaixo estão em nível taxonômico de Filo.
 - ❓ Qual o filo mais abundante na sua amostra?
 - ❓ Qual a espécie mais abundante na sua amostra?
 
+### 🧫 4.	Análise de Diversidade
 
+As análises de diversidade de comunidades microbianas permitem avaliar a heterogeneidade taxonômica encontrada em amostras, além de indicar se a distribuição de espécies nas amostras ocorre uniformemente. Em alguns casos, a homeostase de sistemas pode ser avaliada a partir de índices de diversidade, sendo, portanto, uma medida indicativa das condições boas ou ruins de tecidos, órgãos ou mesmo do ambiente. A diversidade do microbioma pode ser avaliada por meio de múltiplos índices ecológicos, que podem ser divididos em dois tipos de medidas: **diversidade alfa** e **diversidade beta** (Calle 2019). A diversidade **alfa** mede a variabilidade das espécies **dentro de uma amostra**, enquanto a diversidade **beta** considera as diferenças na composição microbiana **entre as amostras**.
 
+#### 4.1. Diversidade Alfa
+
+Os índices de diversidade alfa quantificam a variabilidade de espécies encontradas em uma amostra e incluem tanto os métodos que estimam a **riqueza de espécies** (_richness_) a partir do número observado de táxons únicos em uma amostra, como também os índices que levam em consideração o **número de espécies e suas abundâncias relativas** (_richness + evenness_), de forma a indicar se as espécies estão uniformemente distribuídas em uma amostra.
+
+O **índice de Shannon** (H) é um dos índices de diversidade mais utilizados em estudos metagenômicos. Ele considera tanto a riqueza quanto a uniformidade da distribuição de espécies em uma amostra. Quanto maior o valor do índice de Shannon, maior a diversidade na amostra. Ele pode variar de zero a um valor máximo que depende do número de espécies e da equitabilidade da distribuição de espécies (se há dominância de poucas espécies ou não). Quanto maior o número de espécies presentes e quanto mais uniforme for a distribuição de indivíduos entre elas, maior será o valor do índice de Shannon. Uma amostra com um único táxon terá H = 0 (amostra não diversa) Para interpretar o valor do índice de Shannon, é importante compará-lo com os valores de outras amostras da mesma população ou do mesmo ambiente.
+
+Para calcular a riqueza observada de espécies e o índice de diversidade da amostra que você está analisando no MEGAN6, você deve escolher o nível taxonômico que quer realizar a análise. Como estamos interessados na comunidade microbiana presente nas amostras, os reads atribuídos ao hospedeiro não são interessantes. Ao mesmo tempo, os reads atribuídos aos fungos são irrisórios na comparação com aqueles atribuídos aos procariotos, em particular aos de bactérias. Por isso, vamos usar apenas os Procariotos como representativos do microbioma que estamos analisando. 
+
+Para realizar o cálculo do **número observado de espécies**:
+
+- ▶️ Marque a opção `Tree▸Keep Non-Prokaryotes Collapsed`
+- ▶️ Selecione o nó referente a **Bacteria** e clique no botão `Rank▸Species`. Todas as folhas da árvore com OTUs atribuídas em nível de espécies estarão selecionadas.
+- ▶️ Agora clique em `Show Chart▸Bubble Chart`. A barra de status da janela irá indicar o número de espécies bacterianas (Classes)
+
+- ❓ Quantas OTUs em nível taxonômico de espécie tem a sua amostra?
+- ❓ Compare a riqueza da sua amostra com a de outros grupos
+
+Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguintes passos:
+- ▶️ Certifique-se de que a opção `Tree▸Keep Non-Prokaryotes Collapsed` está marcada ✔️
+- ▶️ Clique no botão `Rank▸Species`
+- ▶️ Escolha o índice de diversidade a ser calculado em `Options▸Shannon-Weaver Index`
+
+O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
 
 
