@@ -136,7 +136,7 @@ Agora, para realizar o cálculo do índice de diversidade alfa, siga os seguinte
 O cálculo será feito levando em consideração a riqueza e a distribuição dos reads atribuídos às diferentes espécies e o resultado será mostrado na janela de log do MEGAN6.
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="400">
+  <img src="{{ site.baseurl }}/images/megan3.png" alt="Megan3" width="450">
 </p>
 
 - ❓ Qual a diversidade encontrada na sua amostra?
@@ -184,7 +184,7 @@ Com o arquivo comparativo gerado, agora é possível também comparar o perfil t
 
 - ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="030">
+  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="070">
 </p>
 
 - ❓ Todas as amostras tem a mesma composição de Filos bacterianos?
@@ -203,7 +203,7 @@ A rarefação é uma medida que indica se as amostras foram sequenciadas com pro
 - ▶️ Calcule a rarefação usando o arquivo de comparação de amostras, clicando no menu `Window▸Rarefaction Analysis`.
 - ❓ o	Qual a sua conclusão sobre a diversidade do microbioma das amostras como função da profundidade de sequenciamento?
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan7.png" alt="Megan7" width="300">
+  <img src="{{ site.baseurl }}/images/megan7.png" alt="Megan7" width="500">
 </p>
 
 
