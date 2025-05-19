@@ -184,7 +184,7 @@ Com o arquivo comparativo gerado, agora é possível também comparar o perfil t
 
 - ▶️ Escolha o gráfico que indica a porcentagem atribuída de reads 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="070">
+  <img src="{{ site.baseurl }}/images/megan6.png" alt="Megan6" width="150">
 </p>
 
 - ❓ Todas as amostras tem a mesma composição de Filos bacterianos?
