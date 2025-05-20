@@ -71,7 +71,7 @@ O novo arquivo DAA “meganizado” pode ser aberto diretamente no programa MEGA
 ---
 ### 🦣 3. MEGAN6 
 
-O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em computadores comuns. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
+O MEGAN6 é um programa que permite a visualização e exploração interativa de conjuntos de dados de metagenomas em desktops. Ao ser iniciado, o programa abre duas janelas. A janela principal mostra uma árvore com a taxonomia definida pelo banco Taxonomy do NCBI. A janela secundária exibe um log de todos os comandos executados durante as análises e eventuais erros.
 
 Para abrir um arquivo DAA já “meganizado” ou um arquivo já exportado no formato ```.megan```, clique em ```File ▸ Open``` e então escolha o arquivo a ser analisado. Você deve escolher um dos arquivos que estão em formato **megan** no diretório **aula_03**. O programa irá mostrar a atribuição dos reads na árvore taxonômica do NCBI. Você pode expandir ou contrair a árvore nos sentidos horizontal e vertical para visualizar melhor. A barra de status na parte inferior da janela mostra as informações sobre o número de táxons sendo mostrado e dados sobre amostra, como o número de reads analisados e atribuídos. Os parâmetros utilizados na “meganização” também podem ser visualizados na barra de status e estão resumidos abaixo:
 
@@ -93,9 +93,9 @@ Você pode colapsar ou expandir os nós para interagir com seus resultados, esco
 
 - ▶️ Clique no botão `Rank` e explore os dados, escolhendo o nível taxonômico que deseja visualizar.
   
-Para facilitar a visualização das abundâncias relativas, vamos criar um gráfico no nível taxonômico que você escolher. As folhas da árvore taxonômica precisam estar selecionadas para isso. A seleção é feita automaticamente quando você escolhe o ranqueamento taxonômico com o botão `Rank`. 
+Para facilitar a visualização das abundâncias relativas dos organismos identificados na sua amostra, vamos criar um gráfico no nível taxonômico que você escolher. As folhas da árvore taxonômica precisam estar selecionadas para isso. A seleção é feita automaticamente quando você escolhe o ranqueamento taxonômico com o botão `Rank`. 
 
-- ▶️ Para gerar o gráfico, clique em `Show chart` no menu de opções e escolha `Show Bubble Chart`, ou `Show Stacked Bar Chart`. Uma nova janela vai abrir com o gráfico e você pode ordenar os táxons por ordem crescente ou decrescente do número de reads clicando no menu à esquerda.
+- ▶️ Para gerar o gráfico, clique em `Show chart` na barra de ferramentas e escolha `Show Bubble Chart`, ou `Show Stacked Bar Chart`. Uma nova janela vai abrir com o gráfico e você pode ordenar os táxons por ordem crescente ou decrescente do número de reads clicando no menu à esquerda.
 
 Os gráficos abaixo estão em nível taxonômico de Filo.
 
@@ -115,9 +115,9 @@ As análises de diversidade de comunidades microbianas permitem avaliar a hetero
 
 Os índices de diversidade alfa quantificam a variabilidade de espécies encontradas em uma amostra e incluem tanto os métodos que estimam a **riqueza de espécies** (_richness_) a partir do número observado de táxons únicos em uma amostra, como também os índices que levam em consideração o **número de espécies e suas abundâncias relativas** (_richness + evenness_), de forma a indicar se as espécies estão uniformemente distribuídas em uma amostra.
 
-O **índice de Shannon** (H) é um dos índices de diversidade mais utilizados em estudos metagenômicos. Ele considera tanto a riqueza quanto a uniformidade da distribuição de espécies em uma amostra. Quanto maior o valor do índice de Shannon, maior a diversidade na amostra. Ele pode variar de zero a um valor máximo que depende do número de espécies e da equitabilidade da distribuição de espécies (se há dominância de poucas espécies ou não). Quanto maior o número de espécies presentes e quanto mais uniforme for a distribuição de indivíduos entre elas, maior será o valor do índice de Shannon. Uma amostra com um único táxon terá H = 0 (amostra não diversa) Para interpretar o valor do índice de Shannon, é importante compará-lo com os valores de outras amostras da mesma população ou do mesmo ambiente.
+O **índice de Shannon** (H) é um dos índices de diversidade mais utilizados em estudos metagenômicos. Ele considera tanto a riqueza quanto a uniformidade da distribuição de espécies em uma amostra. Quanto maior o valor do índice de Shannon, maior a diversidade na amostra. Ele pode variar de zero a um valor máximo que depende do número de espécies e da equitabilidade da distribuição de espécies (se há dominância de poucas espécies ou não). Quanto maior o número de espécies presentes e quanto mais uniforme for a distribuição de indivíduos entre elas, maior será o valor do índice de Shannon. Uma amostra com um único táxon terá H = 0 (amostra não diversa). Para interpretar o valor do índice de Shannon, é importante compará-lo com os valores de outras amostras da mesma população ou do mesmo ambiente.
 
-Para calcular a riqueza observada de espécies e o índice de diversidade da amostra que você está analisando no MEGAN6, você deve escolher o nível taxonômico que quer realizar a análise. Como estamos interessados na comunidade microbiana presente nas amostras, os reads atribuídos ao hospedeiro não são interessantes. Ao mesmo tempo, os reads atribuídos aos fungos são irrisórios na comparação com aqueles atribuídos aos procariotos, em particular aos de bactérias. Por isso, vamos usar apenas os Procariotos como representativos do microbioma que estamos analisando. 
+Para calcular a riqueza observada de espécies e o índice de diversidade da amostra que você está analisando no MEGAN6, você deve escolher o nível taxonômico que quer realizar a análise. Como estamos interessados na comunidade microbiana presente nas amostras, os reads atribuídos ao hospedeiro não são interessantes. Ao mesmo tempo, os reads atribuídos aos fungos e Archaea são irrisórios na comparação com aqueles atribuídos às bactérias. Por isso, vamos usar apenas as bactérias como representativos do microbioma que estamos analisando. 
 
 Para realizar o cálculo do **número observado de espécies**:
 
@@ -204,16 +204,22 @@ Agora repita os mesmos passos acima, mas para o nível taxonômico de **espécie
 
 A rarefação é uma medida que indica se as amostras foram sequenciadas com profundidade suficiente para de fato serem utilizadas como uma medida da diversidade da comunidade microbiana. Nas análises de rarefação, a riqueza de espécies (ou a diversidade alfa) é calculada em subamostras de reads e serve como uma medida da identificação redundante de táxons no seu conjunto de dados. Quando seus dados foram exaustivamente sequenciados, a curva de rarefação atinge um _plateau_, indicando que a amostragem de novos reads contribui muito pouco para a descoberta de novas espécies na amostra. Quando o _plateau_ não é atingido, suas análises de diversidade e identificação taxonômica podem estar subestimando a presença de microrganismos da comunidade, principalmente as espécies mais raras. Portanto, a profundidade de sequenciamento é fundamental para a rarefação. 
 
-- ▶️ Calcule a rarefação usando o arquivo de comparação de amostras, clicando no menu `Window ▸ Rarefaction Analysis`.
-- 
+- ▶️ Calcule a rarefação clicando no menu `Window ▸ Rarefaction Analysis`.
+  
 - ❓ Qual a sua conclusão sobre a diversidade do microbioma das amostras como função da profundidade de sequenciamento?
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/megan7.png" alt="Megan7" width="500">
 </p>
 
+---
+
+ℹ️ Quer saber mais sobre de ordenação e análises estatísticas aplicadas a estudos de microbiomas? Acesse o [GUSTA ME](https://sites.google.com/site/mb3gustame/){:target="_blank"} (Buttigieg & Ramette 2014).
+
 
 [⬅ Voltar para a página principal](/metodos/)
+
+
 ---
 ### 📖 **Referências**
 
