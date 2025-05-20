@@ -8,7 +8,7 @@ permalink: /protocolos/genoma/
 
 # Qualidade de Montagens, Anotação e Resistoma
 
-### 1. QUAST - Qualidade de montagens
+### 🧬 1. QUAST - Qualidade de montagens
 Para a avaliação da qualidade de montagens, vamos utilizar o programa QUAST (Mikheenko et al. 2018), que é capaz de calcular métricas comumente utilizadas para a avaliação de montagens, como o N50 e o L50, além de gerar análises sobre a distribuição dos tamanhos dos contigs e/ou scaffolds e do conteúdo GC do genoma. 
 Vamos instalar o programa no ambiente criado para a disciplina. Para isso, primeiro precisamos ativar o ambiente com o seguinte comando:
 
