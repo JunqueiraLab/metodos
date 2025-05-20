@@ -5,8 +5,9 @@ permalink: /protocolos/metagenomica/
 ---
 [⬅ Voltar para a página principal](/metodos/)
 
+
 <div style="max-width: 600px; margin: 2em auto; padding: 1em; border: 2px solid #ddd; border-radius: 10px; background-color: #f9f9f9; box-shadow: 0 0 5px #ccc;">
-  <h2 style="text-align: center;">🔗 Índice</h2>
+  <h3 style="text-align: left;">🔗 Índice</h3>
   <ul style="list-style-type: none; padding-left: 0; font-size: 16px; line-height: 1.8;">
     <li><a href="#-1-diamond---alinhamento-de-sequências-metagenômicas-geradas-por-shotgun">💎 1. DIAMOND - Alinhamento de sequências metagenômicas</a></li>
     <li><a href="#-2-meganizer--classificação-taxonômica-e-funcional">📊 2. MEGANIZER – classificação taxonômica</a></li>
