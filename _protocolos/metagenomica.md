@@ -107,7 +107,7 @@ Os gráficos abaixo estão em nível taxonômico de Filo.
 - ❓ Qual a espécie mais abundante na sua amostra?
 
 ---
-### 🧫 4.	Análise de Diversidade
+### 🧫 4. Análise de Diversidade
 
 As análises de diversidade de comunidades microbianas permitem avaliar a heterogeneidade taxonômica encontrada em amostras, além de indicar se a distribuição de espécies nas amostras ocorre uniformemente. Em alguns casos, a homeostase de sistemas pode ser avaliada a partir de índices de diversidade, sendo, portanto, uma medida indicativa das condições boas ou ruins de tecidos, órgãos ou mesmo do ambiente. A diversidade do microbioma pode ser avaliada por meio de múltiplos índices ecológicos, que podem ser divididos em dois tipos de medidas: **diversidade alfa** e **diversidade beta** (Calle 2019). A diversidade **alfa** mede a variabilidade das espécies **dentro de uma amostra**, enquanto a diversidade **beta** considera as diferenças na composição microbiana **entre as amostras**.
 
@@ -200,7 +200,7 @@ Agora repita os mesmos passos acima, mas para o nível taxonômico de **espécie
 - ❓ Procure informações sobre estas espécies bacterianas que estão colonizando os grupos experimentais
 
 ---
-### 🔍 6. Rarefação
+### 📈 6. Rarefação
 
 A rarefação é uma medida que indica se as amostras foram sequenciadas com profundidade suficiente para de fato serem utilizadas como uma medida da diversidade da comunidade microbiana. Nas análises de rarefação, a riqueza de espécies (ou a diversidade alfa) é calculada em subamostras de reads e serve como uma medida da identificação redundante de táxons no seu conjunto de dados. Quando seus dados foram exaustivamente sequenciados, a curva de rarefação atinge um _plateau_, indicando que a amostragem de novos reads contribui muito pouco para a descoberta de novas espécies na amostra. Quando o _plateau_ não é atingido, suas análises de diversidade e identificação taxonômica podem estar subestimando a presença de microrganismos da comunidade, principalmente as espécies mais raras. Portanto, a profundidade de sequenciamento é fundamental para a rarefação. 
 
