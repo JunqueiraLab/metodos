@@ -54,11 +54,11 @@ Para realizar a classificação taxonômica e funcional, é necessário usar o p
 
 ```daa-meganizer -i nome_do_arquivo.daa -mdb path/para/megan-map-Feb2022.db -t 30```
 
-```**-i**``` indica o arquivo de entrada/input (ou seja, o arquivo .daa gerado no passo anterior).
+**`-i`** indica o arquivo de entrada/input (ou seja, o arquivo .daa gerado no passo anterior).
 
-```**-mdb**``` indica o endereço do arquivo de mapeamento para classificação taxonômica e funcional, que inclui as informações dos bancos de dados NCBI, GTDB, EC, eggNOG, InterPro2GO, SEED.
+**`-mdb`** indica o endereço do arquivo de mapeamento para classificação taxonômica e funcional, que inclui as informações dos bancos de dados NCBI, GTDB, EC, eggNOG, InterPro2GO, SEED.
 
-```**-t 30**``` é o comando que paraleliza o processamento do arquivo em 30 CPUs (neste exemplo). O número pode variar de acordo com a disponibilidade de CPUs e o default é 8.
+**`-t 30`** é o argumento que paraleliza o processamento do arquivo (em 30 CPUs, neste exemplo). O número pode variar de acordo com a disponibilidade de CPUs e o default é 8.
 
 Ao fim do processo, o arquivo DAA terá três blocos de informação de dados: 
 
