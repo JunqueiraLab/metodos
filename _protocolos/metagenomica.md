@@ -5,14 +5,18 @@ permalink: /protocolos/metagenomica/
 ---
 [⬅ Voltar para a página principal](/metodos/)
 
-### 🔗 Índice
+<div style="max-width: 600px; margin: 2em auto; padding: 1em; border: 2px solid #ddd; border-radius: 10px; background-color: #f9f9f9; box-shadow: 0 0 5px #ccc;">
+  <h2 style="text-align: center;">🔗 Índice</h2>
+  <ul style="list-style-type: none; padding-left: 0; font-size: 16px; line-height: 1.8;">
+    <li><a href="#-1-diamond---alinhamento-de-sequências-metagenômicas-geradas-por-shotgun">💎 1. DIAMOND - Alinhamento de sequências metagenômicas</a></li>
+    <li><a href="#-2-meganizer--classificação-taxonômica-e-funcional">📊 2. MEGANIZER – classificação taxonômica</a></li>
+    <li><a href="#-3-megan6">🦣 3. MEGAN6</a></li>
+    <li><a href="#-4-análise-de-diversidade">🧫 4. Análise de Diversidade</a></li>
+    <li><a href="#-5-análise-comparativa">🔍 5. Análise comparativa</a></li>
+    <li><a href="#-6-rarefação">📈 6. Rarefação</a></li>
+  </ul>
+</div>
 
-- [1. DIAMOND - Alinhamento de sequências metagenômicas geradas por shotgun](#-1-diamond---alinhamento-de-sequências-metagenômicas-geradas-por-shotgun)
-- [2. MEGANIZER – classificação taxonômica e funcional](#-2-meganizer--classificação-taxonômica-e-funcional)
-- [3. MEGAN6](#-3-megan6)
-- [4. Análise de Diversidade](#-4-análise-de-diversidade)
-- [5. Análise comparativa](#-5-análise-comparativa)
-- [6. Rarefação](#-6-rarefação)
 
 
 # 🧬 Metagenômica e Microbiomas - Métodos computacionais 
