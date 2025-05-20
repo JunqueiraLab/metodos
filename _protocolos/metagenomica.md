@@ -213,6 +213,7 @@ A rarefação é uma medida que indica se as amostras foram sequenciadas com pro
 </p>
 
 
+[⬅ Voltar para a página principal](/metodos/)
 ---
 ### 📖 **Referências**
 
