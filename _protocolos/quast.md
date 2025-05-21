@@ -21,7 +21,7 @@ Após a montagem de um genoma, é preciso avaliar se a montagem está satisfató
 
    Caso o programa esteja instalado, você verá um resumo das opções disponíveis para o programa. Se não estiver instalado, um warning vai aparecer na linha de comando:
 
-   <p><span style="color: red;">`-bash: quast: command not found`</span></p>
+   `-bash: quast: command not found`
 
    Se o programa estiver instalado, pule para o passo 4.
 
@@ -32,7 +32,6 @@ Após a montagem de um genoma, é preciso avaliar se a montagem está satisfató
 4. Com o programa instalado, vamos iniciar a análise de qualidade do genoma montado com o seguinte comando:
 
    `quast nome_do_arquivo.fasta -o output`
-
 
 ❗ Não esqueça de substituir o “nome_do_arquivo” pelo do seu genoma montado e dê o nome de sua preferência para o diretório de output.
 
