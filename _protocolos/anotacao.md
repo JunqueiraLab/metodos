@@ -5,7 +5,7 @@ permalink: /protocolos/anotacao/
 ---
 [⬅ Voltar para a página principal](/metodos/)
 
-## 🧬 Anotação
+# 🔎 Anotação
 
 Após a montagem de genomas, é possível avaliar suas características estruturais e sua organização, mas para analisar as características funcionais, é necessário realizar o passo de **anotação**. O processo de anotação de um genoma permite identificar, nomear e estabelecer a localização de cada característica relevante na sequência genômica de uma espécie. 
 
@@ -38,7 +38,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
 
 ---
 
-### 🧪 Anotação e visualização no Proksee:
+## 🧪 Anotação e visualização no Proksee:
 
 1. Acesse o portal do Proksee em: [https://proksee.ca](https://proksee.ca){:target="_blank"}  
 2. Clique em **Browse** e faça o upload do arquivo **FASTA** da montagem do genoma que está no diretório **aula_04**.  
@@ -69,6 +69,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
 </p>
 
 13.	Se você quiser fazer o download da figura do seu genoma anotado, clique na aba de **Download** do menu e então em **Image**.
+
 
 
 
