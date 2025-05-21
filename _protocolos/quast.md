@@ -21,7 +21,7 @@ Após a montagem de um genoma, é preciso avaliar se a montagem está satisfató
 
    Caso o programa esteja instalado, você verá um resumo das opções disponíveis para o programa. Se não estiver instalado, um warning vai aparecer na linha de comando:
 
-   <pre> ```bash -bash: quast: command not found ``` </pre>
+   <pre> ```-bash: quast: command not found ``` </pre>
 
    Se o programa estiver instalado, pule para o passo 4.
 
