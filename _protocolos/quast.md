@@ -51,3 +51,6 @@ Analise os resultados:
 
 ---
 ### 📖 **Referências**
+
+- Mikheenko A, Prjibelski A, Saveliev V, et al (2018) Versatile genome assembly evaluation with QUAST-LG. Bioinformatics 34:i142–i150. https://doi.org/10.1093/bioinformatics/bty266
+
