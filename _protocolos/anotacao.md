@@ -57,7 +57,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
 10.	Você pode adicionar algumas estatísticas ao seu genoma, para caracterizá-lo melhor. Adicione um índice do conteúdo GC deste genoma. Clique no botão Add no submenu Sequence Composition e então em OK. Um gráfico do conteúdo GC do genoma irá ser adicionado à sua figura, indicando que algumas regiões são mais ricas em GC do que outras.
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/proksee1.png" alt="Proksee1" width="600">
+  <img src="{{ site.baseurl }}/images/proksee1.png" alt="Proksee1" width="700">
 </p>
 
 11.	Você pode procurar por características específicas deste genoma. Clique no menu **Regions**, então em **Features**. Uma lista com todas as características anotadas no genoma irá aparecer. Qual o principal tipo de característica (**feature**) anotada neste genoma?
@@ -65,7 +65,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
     <br>📌 **Dica:** use a lupa para buscar características específicas usando o tipo de característica (**Type**)
 
 <p style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/proksee2.png" alt="Proksee2" width="450">
+  <img src="{{ site.baseurl }}/images/proksee2.png" alt="Proksee2" width="350">
 </p>
 
 13.	Se você quiser fazer o download da figura do seu genoma anotado, clique na aba de **Download** do menu e então em **Image**.
