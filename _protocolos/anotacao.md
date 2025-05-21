@@ -56,17 +56,30 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
    Salve as mudanças feitas para não perder os resultados em caso de algum erro, clicando no botão **Save Changes**, que fica na parte superior direita da janela.
 10.	Você pode adicionar algumas estatísticas ao seu genoma, para caracterizá-lo melhor. Adicione um índice do conteúdo GC deste genoma. Clique no botão Add no submenu Sequence Composition e então em OK. Um gráfico do conteúdo GC do genoma irá ser adicionado à sua figura, indicando que algumas regiões são mais ricas em GC do que outras.
 
-
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/proksee1.png" alt="Proksee1" width="600">
+</p>
 
 11.	Você pode procurar por características específicas deste genoma. Clique no menu **Regions**, então em **Features**. Uma lista com todas as características anotadas no genoma irá aparecer. Qual o principal tipo de característica (**feature**) anotada neste genoma?
 12.	Você consegue saber quantos **CDS**, **tRNAs** e **rRNAs** foram anotados neste genoma?
-    📌 **Dica:** use a lupa para buscar características específicas usando o tipo de característica (**Type**)
+    <br>📌 **Dica:** use a lupa para buscar características específicas usando o tipo de característica (**Type**)
 
-
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/proksee2.png" alt="Proksee2" width="450">
+</p>
 
 13.	Se você quiser fazer o download da figura do seu genoma anotado, clique na aba de **Download** do menu e então em **Image**.
 
-    
+
+
+[⬅ Voltar para a página principal](/metodos/)
+
+---
+### 📖 **Referências**
+
+- Grant JR, Enns E, Marinier E, et al (2023) Proksee: in-depth characterization and visualization of bacterial genomes. Nucleic Acids Res. [https://doi.org/10.1093/nar/gkad326](https://doi.org/10.1093/nar/gkad326){:target="_blank"}
+- Hyatt D, Chen G-L, LoCascio PF, et al (2010) Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinform 11:119. [https://doi.org/10.1186/1471-2105-11-119](https://doi.org/10.1186/1471-2105-11-119){:target="_blank"}
+- Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics 30:2068 2069. [https://doi.org/10.1093/bioinformatics/btu153](https://doi.org/10.1093/bioinformatics/btu153){:target="_blank"}
    	
 
 
