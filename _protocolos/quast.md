@@ -13,25 +13,26 @@ Após a montagem de um genoma, é preciso avaliar se a montagem está satisfató
 
 1. Certifique-se de que o programa está instalado e disponível no ambiente de gerenciamento criado para a disciplina. Para isso, ative o ambiente com o seguinte comando:
 
-`micromamba activate metodos`
+   `micromamba activate metodos`
 
 2. Para testar se o QUAST está instalado no seu sistema, vamos chamar o comando do programa do seu terminal:
 
-`quast`
+   `quast`
 
-Caso o programa esteja instalado, você verá um resumo das opções disponíveis para o programa. Se não estiver instalado, um warning vai aparecer na linha de comando:
+   Caso o programa esteja instalado, você verá um resumo das opções disponíveis para o programa. Se não estiver instalado, um warning vai aparecer na linha de comando:
 
-`-bash: quast: command not found`
+   `-bash: quast: command not found`
 
-Se o programa estiver instalado, pule para o passo 4.
+   Se o programa estiver instalado, pule para o passo 4.
 
 3. Caso o QUAST não esteja instalado no seu ambiente, vamos instalá-lo a partir do repositório de programas de bioinformática chamado Bioconda, com o comando:
 
-`micromamba install -c bioconda quast`
+   `micromamba install -c bioconda quast`
 
 4. Com o programa instalado, vamos iniciar a análise de qualidade do genoma montado com o seguinte comando:
 
-`quast nome_do_arquivo.fasta -o output`
+   `quast nome_do_arquivo.fasta -o output`
+
 
 ❗ Não esqueça de substituir o “nome_do_arquivo” pelo do seu genoma montado e dê o nome de sua preferência para o diretório de output.
 
