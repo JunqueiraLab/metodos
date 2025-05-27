@@ -15,6 +15,11 @@ Para identificar genes que podem estar envolvidos na resistência a antimicrobia
 
 Explore os resultados das abas disponíveis (AMR Genes, Drug Class, Resistance Mechanism)
 
+<p style="text-align: center;">
+  <img src="{{ site.baseurl }}/images/resitoma1.png" alt="Resistoma1" width="600">
+</p>
+
+
 [⬅ Voltar para a página principal](/metodos/)
 
 ### 📖 **Referências**
