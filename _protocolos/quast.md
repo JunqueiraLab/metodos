@@ -33,7 +33,7 @@ Após a montagem de um genoma, é preciso avaliar se a montagem está satisfató
 
    `quast nome_do_arquivo.fasta -o output`
 
-❗ Não esqueça de substituir o “nome_do_arquivo” pelo do seu genoma montado e dê o nome de sua preferência para o diretório de output.
+❗ Não esqueça de substituir o “nome_do_arquivo” pelo do seu genoma montado, no diretório `aula_04`, e dê o nome de sua preferência para o diretório de output.
 
 5. Após a análise ter terminado, mude para o diretório de output e abra o arquivo **report.html**.
 
