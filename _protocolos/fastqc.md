@@ -42,7 +42,7 @@ Quando o programa abrir, siga o seguinte protocolo:
 
 **9**.	O **conteúdo de bases “N”** se refere às bases que não foram adequadamente detectadas pelo sistema de imagem do sequenciador. A substituição de qualquer base por um N indica que nenhuma das bases pôde ser detectada com confiança suficiente e é um erro no basecalling. O número de Ns em uma sequência é um fator importante para as análises seguintes e influencia na qualidade global do read. 
 
-**10**.	O gráfico de **distribuição do tamanho das sequências** irá traduzir o tamanho dos fragmentos da biblioteca e/ou o tamanho máximo dos reads gerado na plataforma. Para a plataforma Illumina, é normal o gráfico um pico no tamanho máximo dos reads, com 101, 151, 251 ou 301 bases (a depender da plataforma).
+**10**.	O gráfico de **distribuição do tamanho das sequências** irá traduzir o tamanho dos fragmentos da biblioteca e/ou o tamanho máximo dos reads gerado na plataforma. Para a plataforma Illumina, é normal o gráfico com um pico no tamanho de 101, 151, 251 ou 301 bases (a depender da plataforma).
 
 **11**.	O módulo de **análise de sequências duplicadas** indica a quantidade de reads idênticos gerados na biblioteca. O resultado pode indicar um alto nível de cobertura de um determinado genoma (regiões sequenciadas com redundância) ou algum viés na construção ou enriquecimento da biblioteca. É esperado que em bibliotecas suficientemente diversas, a maior parte das sequências esteja à esquerda do gráfico. Em caso de enriquecimento de bibliotecas, a presença de algumas regiões pode estar super-representada e por isso picos ao longo da curva podem ocorrer. O módulo também calcula a perda de reads em caso de deduplicação (desconsideração dos reads duplicados). 
 
