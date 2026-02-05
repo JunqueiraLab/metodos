@@ -40,7 +40,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
 
 ## 🧪 Anotação e visualização no Proksee:
 
-1. Acesse o portal do Proksee em: [https://proksee.ca](https://proksee.ca){:target="_blank"}  
+1. Acesse o portal do Proksee em: [https://proksee.ca](https://proksee.ca) {:target="_blank"}  
 2. Clique em **Browse** e faça o upload do arquivo **FASTA** da montagem do genoma que está no diretório `aula_04`.  
 3. Clique no botão **Create Map**.  
 4. A janela que será carregada terá uma figura circular do genoma.  
