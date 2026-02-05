@@ -8,7 +8,7 @@ permalink: /protocolos/quast/
 
 # 🧬 QUAST - Qualidade de Montagens
 
-Após a montagem de um genoma, é fundamental avaliar sua contiguidade e integridade para assegurar a confiabilidade das análises subsequentes. Para isso, utilizamos programas que calculam métricas de contiguidade e completude dos genomas. O QUAST (Quality Assessment Tool for Genome Assemblies) é um programa que calcula métricas como N50, L50, tamanho total da montagem, número de contigs, além de gerar gráficos sobre a distribuição do tamanho dos contigs e/ou scaffolds e do conteúdo de GC (Mikheenko et al. 2018). Ele também permite a comparação da sua montagem com genomas de referência, quando disponíveis, facilitando a identificação de possíveis falhas ou fragmentações na montagem. É amplamente utilizado em análises de bioinformática por sua eficiência, praticidade e resultados detalhados.
+Após a montagem de um genoma, é fundamental avaliar sua contiguidade e integridade para assegurar a confiabilidade das análises subsequentes. Para isso, utilizamos programas que calculam métricas de contiguidade e completude dos genomas. O QUAST (Quality Assessment Tool for Genome Assemblies) é um programa que calcula métricas como N50, L50, tamanho total da montagem, número de contigs, além de gerar gráficos sobre a distribuição do tamanho dos contigs e/ou scaffolds e do conteúdo de GC (Mikheenko et al. 2018). O QUAST é amplamente utilizado em análises de bioinformática por sua eficiência, praticidade e resultados detalhados.
 
 1. Certifique-se de que o programa está instalado e disponível no ambiente de gerenciamento criado para a disciplina. Para isso, ative o ambiente com o seguinte comando:
 
