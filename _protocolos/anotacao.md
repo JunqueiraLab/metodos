@@ -67,7 +67,7 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
      <img src="{{ site.baseurl }}/images/proksee2.png" alt="Proksee2" width="350">
     </p>
 
-12. Agora vamos comparar a identidade do genoma montado com o genoma de referência da espécie _Elizabethkingia anophelis_. Volte para o menu **Tools** e no submenu **Sequence Comparison**, clique no botão de **Start** da ferramenta **FastANI**. No campo Query, coloque o número de acesso do genoma de referência de _E. anophelis_ linhagem R26, do NCBI: **GCF_002023665.2**. Clique em **OK** e analise os resultados.
+12. Agora vamos comparar a identidade do genoma montado com o genoma de referência da espécie _Elizabethkingia anophelis_. Volte para o menu **Tools** e no submenu **Sequence Comparison**, clique no botão de **Start** da ferramenta **FastANI**. No campo **Query**, insira o número de acesso do genoma de referência de _E. anophelis_ (linhagem R26): **GCF_002023665.2**. Clique em **OK** e analise os resultados.
 13.	Se você quiser fazer o download da figura do seu genoma anotado, clique no menu Data e então na aba **Download**.
 
 
