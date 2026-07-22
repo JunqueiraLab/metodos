@@ -54,21 +54,21 @@ Se nenhum *match* for encontrado, mas houver evidência da predição computacio
 8. Agora clique em **Add Features to Map**, para visualizar as anotações no genoma, e então em **OK**.  
 9. Uma janela com o mapa genômico anotado irá aparecer.  
    Salve as mudanças feitas para não perder os resultados em caso de algum erro, clicando no botão **Save Changes**, que fica na parte superior direita da janela.
-10.	Você pode adicionar algumas estatísticas ao seu genoma, para caracterizá-lo melhor. Adicione um índice do conteúdo GC deste genoma. Clique no botão Add no submenu Sequence Composition e então em OK. Um gráfico do conteúdo GC do genoma irá ser adicionado à sua figura, indicando que algumas regiões são mais ricas em GC do que outras.
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/proksee1.png" alt="Proksee1" width="700">
 </p>
 
-11.	Você pode procurar por características específicas deste genoma. Clique no menu **Regions**, então em **Features**. Uma lista com todas as características anotadas no genoma irá aparecer. Qual o principal tipo de característica (**feature**) anotada neste genoma?
-12.	Você consegue saber quantos **CDS**, **tRNAs** e **rRNAs** foram anotados neste genoma?
+10.	Você pode procurar por características específicas deste genoma. Clique no menu **Regions**, então em **Features**. Uma lista com todas as características anotadas no genoma irá aparecer. Qual o principal tipo de característica (**feature**) anotada neste genoma?
+11.	Você consegue saber quantos **CDS**, **tRNAs** e **rRNAs** foram anotados neste genoma?
     <br>📌 **Dica:** use a lupa para buscar características específicas usando o tipo de característica (**Type**)
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/images/proksee2.png" alt="Proksee2" width="350">
 </p>
 
-13.	Se você quiser fazer o download da figura do seu genoma anotado, clique na aba de **Download** do menu e então em **Image**.
+12. Agora vamos comparar a identidade do genoma montado com o genoma de referência da espécie _Elizabethkingia anophelis_. Volte para o menu **Tools** e no submenu **Sequence Comparison**, clique no botão de **Start** da ferramenta **FastANI**. No campo Query, coloque o número de acesso do genoma de referência de _E. anophelis_ linhagem R26, do NCBI: **GCF_002023665.2**. Clique em **OK** e analise os resultados.
+13.	Se você quiser fazer o download da figura do seu genoma anotado, clique no menu Data e então na aba **Download**.
 
 
 
