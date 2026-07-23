@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Protocolo - BLAST"
+title: "Protocolo - Resistoma"
 permalink: /protocolos/resistoma/
 ---
 [⬅ Voltar para a página principal](/metodos/)
